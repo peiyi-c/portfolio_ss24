@@ -1,0 +1,22 @@
+---
+import NavbarLink from "./NavbarLink.astro";
+import NavbarIcon from "./NavbarIcon.astro";
+import { GithubIcon, LinkedInIcon } from "../components/Icons"
+import ModeSwitcher from "./ModeSwitcher"
+---
+
+<nav class="grid grid-cols-12 border border-solid border-cyan-500">
+  <ul class="col-span-5 p-10 font-medium flex justify-between items-center">
+    <NavbarLink href="/" title="Home" className="" />
+    <NavbarLink href="/about" title="About" />
+    <NavbarLink href="/projects" title="Projects" />
+    <NavbarLink href="/contact" title="Contact" />
+  </ul>
+  <div class="col-span-4"></div>
+  <ul class="col-span-2 flex items-center justify-around">
+    <NavbarIcon href="https://github.com/peiyi-c"><GithubIcon className="text-dark dark:text-primary" client:load /></NavbarIcon>
+    <NavbarIcon href="https://"><LinkedInIcon className="fill-dark dark:fill-primary" client:load /></NavbarIcon>
+    <NavbarIcon><ModeSwitcher client:idle/></NavbarIcon>
+  </ul>
+</nav>
+
