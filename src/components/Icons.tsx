@@ -3,6 +3,7 @@ type IconProps = {
 };
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export const GithubIcon = ({ className, ...rest }: IconProps) => (
   <motion.svg
@@ -43,13 +44,15 @@ export const LinkedInIcon = ({ className, ...rest }: IconProps) => (
 );
 
 export const SunIcon = ({ className, ...rest }: IconProps) => (
-  <svg
+  <motion.svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     {...rest}
     className={`w-full h-auto ${className}`}
+    whileHover={{ y: -2 }}
+    whileTap={{ scale: 1.1 }}
   >
     <g
       fill="none"
@@ -217,17 +220,19 @@ export const SunIcon = ({ className, ...rest }: IconProps) => (
         values="6;10"
       />
     </circle>
-  </svg>
+  </motion.svg>
 );
 
 export const MoonIcon = ({ className, ...rest }: IconProps) => (
-  <svg
+  <motion.svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     viewBox="0 0 24 24"
     {...rest}
     className={`w-full h-auto ${className}`}
+    whileHover={{ y: -2 }}
+    whileTap={{ scale: 1.1 }}
   >
     <rect x="0" y="0" width="24" height="24" fill="rgba(255, 255, 255, 0)" />
     <g
@@ -373,5 +378,43 @@ export const MoonIcon = ({ className, ...rest }: IconProps) => (
         values="10;6"
       />
     </circle>
-  </svg>
+  </motion.svg>
 );
+
+export const MenuIcon = () => {
+  const [isX, setIsX] = useState(false);
+  const handleClick = () => setIsX(!isX);
+
+  useEffect(() => {
+    let width = window.innerWidth || document.documentElement.clientWidth;
+    const setMenu = () => {
+      if (width < 1024) setIsX(false);
+    };
+    window.addEventListener("resize", setMenu);
+    return () => window.removeEventListener("resize", setMenu);
+  });
+
+  return (
+    <button
+      onClick={handleClick}
+      id="menu-icon"
+      className="absolute top-[2.5rem] left-[10vw] flex flex-col justify-center z-30 lg:hidden"
+    >
+      <span
+        className={`bg-dark dark:bg-light block transition-transform duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          isX ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+        }`}
+      ></span>
+      <span
+        className={`bg-dark dark:bg-light block transition-transform duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+          isX ? "opacity-0" : "opacity-100"
+        }`}
+      ></span>
+      <span
+        className={`bg-dark dark:bg-light block transition-transform duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          isX ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+        }`}
+      ></span>
+    </button>
+  );
+};

@@ -6,8 +6,8 @@ interface Props {
 const { href, className } = Astro.props;
 ---
 
-<li class={`${className} w-8`}  >
+<li class={`${className} w-8 mt-5 mb-10 lg:mt-0 lg:mb-0`}  >
   <a  href={href} target={"_blank"} >
      <slot />  
-  <a>
+  </a>
 </li>

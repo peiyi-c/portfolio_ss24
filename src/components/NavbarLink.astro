@@ -6,13 +6,13 @@ interface Props {
 }
 const { title, href, className } = Astro.props;
 const { pathname } = Astro.url
+
 ---
 
-<li class={`relative group ${className}`}>
-      <a href={href} class={`${pathname === href ? 'text-primary dark:text-primaryDark' : 'text-dark dark:text-light'}`}>{title}
+<li class={`nav-link relative group my-9 lg:my-0 text-center ${className}`}>
+      <a href={href} class={`${pathname === href ? 'text-primary dark:text-primaryDark' : 'text-dark dark:text-light'}`}>{title}</a>
       <span
-        class={`h-1 inline-block  absolute left-0 -bottom-0.5 rounded-sm group-hover:w-full translate-[width] ease duration-300  ${pathname === href ? 'w-full bg-primary dark:bg-primaryDark' : 'w-0 bg-dark dark:bg-light'}`}>
+        class={`h-1 absolute left-0 -bottom-0.5 rounded-sm group-hover:w-full translate-[width] ease duration-300  ${pathname === href ? 'w-full bg-primary dark:bg-primaryDark' : 'w-0 bg-dark dark:bg-light'}`}>
         &nbsp;
-      </span>
-      </a>
+      </span>      
 </li>

@@ -1,22 +1,76 @@
 ---
 import NavbarLink from "./NavbarLink.astro";
 import NavbarIcon from "./NavbarIcon.astro";
-import { GithubIcon, LinkedInIcon } from "../components/Icons"
+import { MenuIcon, GithubIcon, LinkedInIcon } from "../components/Icons"
 import ModeSwitcher from "./ModeSwitcher"
 ---
 
-<nav class="grid grid-cols-12 border border-solid border-cyan-500">
-  <ul class="col-span-5 p-10 font-medium flex justify-between items-center">
-    <NavbarLink href="/" title="Home" className="" />
+<MenuIcon client:visible /> 
+<nav class="nav lg:grid lg:grid-cols-12 bg-light/75 dark:bg-dark/75"> 
+  <ul class="menu p-10 mx-auto mt-5 lg:mt-0 font-medium w-[85%] lg:w-full flex flex-col lg:flex-row justify-between items-center lg:col-span-6">
+    <NavbarLink href="/" title="Home" />
     <NavbarLink href="/about" title="About" />
     <NavbarLink href="/projects" title="Projects" />
     <NavbarLink href="/contact" title="Contact" />
   </ul>
-  <div class="col-span-4"></div>
-  <ul class="col-span-2 flex items-center justify-around">
+  <div class="lg:col-span-2"></div>
+  <ul class="menu mx-auto w-[85%] lg:w-full flex items-center justify-around lg:col-span-4">
     <NavbarIcon href="https://github.com/peiyi-c"><GithubIcon className="text-dark dark:text-primary" client:load /></NavbarIcon>
     <NavbarIcon href="https://"><LinkedInIcon className="fill-dark dark:fill-primary" client:load /></NavbarIcon>
-    <NavbarIcon><ModeSwitcher client:idle/></NavbarIcon>
+    <NavbarIcon><ModeSwitcher client:idle /></NavbarIcon>
   </ul>
 </nav>
 
+<style scoped>
+nav {
+  position: fixed;
+  inset: 0;
+  overflow: hidden; 
+  opacity: 0;
+  transform: translateY(-100%);
+  transform-origin: bottom;
+  transition: opacity 1.2s ease-out;
+}
+
+nav.open {
+  height: auto;
+  overflow: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    height: 6rem;
+    overflow: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  nav.open {
+    height: 6rem;
+}
+}
+
+</style>
+
+<script>
+  const nav = document.querySelector('nav') as HTMLElement
+  const menuBtn = document.querySelector('#menu-icon') as HTMLButtonElement
+  const navLinks = document.querySelectorAll('.nav-link')
+
+  const toggleMenu = (ele: Element): ()=> void => {
+    nav.classList.toggle('open');
+    return () => ele.removeEventListener("click", () => toggleMenu(menuBtn))
+  }
+
+  const setMenu = (): ()=> void => {
+    let width  = window.innerWidth || document.documentElement.clientWidth;
+    width >= 1024 ?  nav.classList.add('open') :  nav.classList.remove('open');
+    return () =>  window.removeEventListener("resize", setMenu)
+  }
+
+  menuBtn?.addEventListener("click", () => toggleMenu(menuBtn));
+  window.addEventListener("resize", setMenu);
+  navLinks?.forEach((link) => link.addEventListener("click", () => toggleMenu(link)))
+  
+</script>
