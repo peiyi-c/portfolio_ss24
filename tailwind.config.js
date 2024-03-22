@@ -5,6 +5,9 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      srcreens: {
+        xs: "320px",
+      },
       fontFamily: {
         mont: ["Montserrat"],
       },
