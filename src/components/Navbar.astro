@@ -20,13 +20,13 @@ import ModeSwitcher from "./ModeSwitcher"
     <NavbarIcon><ModeSwitcher client:idle /></NavbarIcon>
   </ul>
 </nav>
-
+ 
 <style scoped>
 nav {
-  opacity: 0;
+  opacity: 0.4;
   transform: translateY(-100%);
   transform-origin: bottom;
-  transition: opacity 1.2s ease-out;
+  transition: opacity 1s ease;
 }
 
 nav.open {
