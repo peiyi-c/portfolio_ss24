@@ -18,16 +18,19 @@
     @apply max-w-[75rem] mx-auto;
   }
   nav {
-    @apply bg-light/80 dark:bg-dark/80 lg:bg-inherit;
+    @apply fixed inset-0 bg-light/85 dark:bg-dark/85 lg:bg-transparent dark:lg:bg-transparent text-[1.5rem];
   }
   main {
     @apply mt-24 w-screen h-full;
   }
   section {
-    @apply h-full w-full block;
+    @apply h-full w-full block p-5 md:p-10 lg:p-12;
+  }
+  .h1 {
+    @apply text-[3rem] md:text-[3.5rem] lg:text-[6rem] font-bold capitalize text-center text-dark dark:text-light leading-[120%] tracking-[-0.05em] my-5 lg:my-8;
   }
   .btn {
-    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+    @apply py-[18px] px-[50px] h-16 flex items-center justify-center text-base font-semibold bg-dark dark:bg-light text-white dark:text-dark hover:scale-105 transition-transform duration-150;
   }
 }
 :root {
