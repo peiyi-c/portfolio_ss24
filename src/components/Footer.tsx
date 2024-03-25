@@ -1,9 +1,5 @@
 const Footer = () => {
-  return (
-    <footer className="fixed bottom-0 w-full border border-solid border-cyan-500 p-10">
-      Footer
-    </footer>
-  );
+  return <footer className="fixed bottom-0 w-full p-10"></footer>;
 };
 
 export default Footer;

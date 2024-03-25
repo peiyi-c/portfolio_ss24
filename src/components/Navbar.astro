@@ -6,7 +6,7 @@ import ModeSwitcher from "./ModeSwitcher"
 ---
 
 <MenuIcon client:visible /> 
-<nav class="nav lg:grid lg:grid-cols-12 bg-light/75 dark:bg-dark/75"> 
+<nav class="bg-light/80 dark:bg-dark/80"> 
   <ul class="menu p-10 mx-auto mt-5 lg:mt-0 font-medium w-[85%] lg:w-full flex flex-col lg:flex-row justify-between items-center lg:col-span-6">
     <NavbarLink href="/" title="Home" />
     <NavbarLink href="/about" title="About" />
@@ -16,7 +16,7 @@ import ModeSwitcher from "./ModeSwitcher"
   <div class="lg:col-span-2"></div>
   <ul class="menu mx-auto w-[85%] lg:w-full flex items-center justify-around lg:col-span-4">
     <NavbarIcon href="https://github.com/peiyi-c"><GithubIcon className="text-dark dark:text-primary" client:load /></NavbarIcon>
-    <NavbarIcon href="https://"><LinkedInIcon className="fill-dark dark:fill-primary" client:load /></NavbarIcon>
+    <NavbarIcon href="https://www.linkedin.com/in/peiyichena/"><LinkedInIcon className="fill-dark dark:fill-primary" client:load /></NavbarIcon>
     <NavbarIcon><ModeSwitcher client:idle /></NavbarIcon>
   </ul>
 </nav>
@@ -34,21 +34,21 @@ nav {
 
 nav.open {
   height: auto;
-  overflow: auto;
   opacity: 1;
   transform: translateY(0);
 }
 
 @media only screen and (min-width: 1024px) {
   nav {
-    height: 6rem;
-    overflow: auto;
+    height: var(--nav-h);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     opacity: 1;
     transform: translateY(0);
   }
   nav.open {
-    height: 6rem;
-}
+    height: var(--nav-h);
+  }
 }
 
 </style>

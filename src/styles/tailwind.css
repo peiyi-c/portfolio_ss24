@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  font-family: Montserrat, Georgia, "Times New Roman", Times, sans-serif;
+  --nav-h: 6rem;
+}
+
+header,
+nav,
+main,
+section,
+footer {
+  margin: 0 auto; /* center */
+  max-width: 75rem; /* 1200px */
+}
+
+main {
+  margin-top: var(--nav-h);
+  min-height: 80svh;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
