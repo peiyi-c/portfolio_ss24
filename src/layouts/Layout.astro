@@ -1,8 +1,11 @@
 ---
+// import styles 
 import '../styles/tailwind.css'
+// import components
 import Navbar from "../components/Navbar.astro"
+import Main from '../components/Main';
 import Footer from "../components/Footer"
-
+// types
 interface Props {
 	title: string;
 	description: string;
@@ -10,7 +13,6 @@ interface Props {
 const { title } = Astro.props;
 const { description } = Astro.props;
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -25,9 +27,9 @@ const { description } = Astro.props;
 		<header>
 			<Navbar />
 		</header>
-		<main>
-			<slot /> <!-- All the different pages to be rendered here -->
-		</main>
+		<Main client:load>
+			<slot /> <!-- different pages to be rendered here -->
+		</Main>
 		<Footer client:idle/>
 	</body>
 </html>
