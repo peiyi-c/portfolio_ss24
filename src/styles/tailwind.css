@@ -1,24 +1,41 @@
+/* import font-family */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root {
-  font-family: Montserrat, Georgia, "Times New Roman", Times, sans-serif;
-  --nav-h: 6rem;
-}
-
-header,
-nav,
-main,
-section,
-footer {
-  margin: 0 auto; /* center */
-  max-width: 75rem; /* 1200px */
-}
-
-main {
-  margin-top: var(--nav-h);
-  min-height: 80svh;
-}
-
+/* import tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply w-screen bg-light text-dark dark:bg-dark;
+  }
+  header,
+  nav,
+  main,
+  section,
+  footer {
+    @apply max-w-[75rem] mx-auto;
+  }
+  nav {
+    @apply bg-light/80 dark:bg-dark/80 lg:bg-inherit;
+  }
+  main {
+    @apply mt-24 w-screen h-full;
+  }
+  section {
+    @apply h-full w-full block;
+  }
+  .btn {
+    @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+  }
+}
+:root {
+  font-family: Montserrat, Georgia, Verdana, Geneva, Tahoma, sans-serif;
+  --nav-h: 6rem;
+  --footer-h: 10rem;
+}
+
+body {
+  height: calc(100svh - var(--nav-h));
+}
