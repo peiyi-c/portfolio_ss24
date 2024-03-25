@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+// import components
+import AnimatedHeadline from '../components/AnimatedHeadline';
 ---
 
 <Layout title="Projects | Pei-Yi" description="Pei-Yi frontend projects">
-		 <section class="bg-pink-200">projects page</section>
+		 <section class="bg-pink-200"><AnimatedHeadline text="Projects page" client:visible /></section>
 </Layout>
 
 
