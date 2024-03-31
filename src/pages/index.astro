@@ -1,12 +1,89 @@
 ---
-import Layout from '../layouts/Layout.astro';
-// import components
-import AnimatedH1 from '../components/AnimatedH1';
+import Layout from "../layouts/Layout.astro";
+import { GithubIcon, LinkedInIcon, Name } from "../components/Icons";
+import SectionFade from "../components/SectionFade";
 ---
 
-<Layout title="Portfolio | Pei-Yi" description='Portfolio | Pei-Yi'>
-	<section class="bg-primary">
-		<AnimatedH1 text="Home page" client:visible />
-		<h2 class="h2">Web Development | Frontend</h2>
-	</section>
+<Layout title="Portfolio | Pei-Yi" description="Portfolio | Pei-Yi">
+  <SectionFade
+    className="py-10 lg:py-20 flex flex-col md:flex lg:flex-row md:justify-evenly md:items-center"
+    client:visible
+  >
+    <!-- wrapper 1 -->
+    <div class="flex-1">
+      <h1 class="h1">
+        Hello, <br />
+        my name is <br />
+        <Name className="w-full mt-10" client:idle />
+      </h1>
+      <h2 class="h2">Welcome to my portfolio!</h2>
+    </div>
+
+    <!-- wrapper 2 -->
+    <div class="flex-1 h-auto [&>div]:mb-10">
+      <div>
+        <button class="btn btn-lg mx-auto group">
+          <div class="relative">
+            <a href="/projects"
+              >You can find my work
+              <span
+                class="group-hover:font-bold translate-[font] ease duration-300"
+              >
+                here</span
+              >
+            </a>
+            <span
+              class="w-0 h-1 absolute left-0 right-[2.5rem] -bottom-[0.5rem] rounded-sm group-hover:w-[100%] translate-[width] ease duration-300 bg-light dark:bg-dark"
+              aria-hidden="true"
+            >
+              &nbsp;
+            </span>
+          </div>
+        </button>
+      </div>
+
+      <div>
+        <h2 class="h2 md:mb-10">Or visit my profile on</h2>
+        <div
+          class="flex flex-col sm:flex-row [&>div]:mb-5 sm:[&>*:nth-child(2)]:ml-3 md:[&>div]:mb-6 justify-center items-center"
+        >
+          <!-- button wrapper -->
+          <div class="group">
+            <button
+              class="btn btn-sm bg-white dark:bg-black border-secondary dark:border-secondaryDark group-hover:border-dark dark:group-hover:border-light translate-[border] ease-in duration-400"
+            >
+              <GithubIcon
+                className="hidden md:block mr-3 lg:mr-4 w-[2.25rem] lg:w-12 text-secondary dark:text-secondaryDark group-hover:text-dark dark:group-hover:text-light linear duration-200"
+                client:visible
+              />
+              <a
+                href="https://github.com/peiyi-c"
+                target="_blank"
+                class="text-secondary dark:text-secondaryDark group-hover:font-bold group-hover:text-dark dark:group-hover:text-light translate-[font] linear duration-200"
+                >Github</a
+              >
+            </button>
+          </div>
+
+          <!-- button wrapper -->
+          <div class="group">
+            <button
+              class="btn btn-sm bg-white dark:bg-black border-secondary dark:border-secondaryDark group-hover:border-dark dark:group-hover:border-light translate-[border] ease-in duration-400"
+            >
+              <a
+                href="https://www.linkedin.com/in/peiyichena/"
+                target="_blank"
+                class="text-secondary dark:text-secondaryDark group-hover:font-bold group-hover:text-dark dark:group-hover:text-light translate-[font] linear duration-200"
+                >LinkedIn</a
+              >
+              <LinkedInIcon
+                className="hidden md:block ml-3 lg:ml-4 w-[2.25rem] lg:w-12 fill-secondary dark:fill-secondaryDark group-hover:fill-dark dark:group-hover:fill-light linear duration-200"
+                client:visible
+              /></button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </SectionFade>
 </Layout>
