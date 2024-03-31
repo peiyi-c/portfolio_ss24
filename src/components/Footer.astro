@@ -1,0 +1,34 @@
+<footer
+  class="fixed bottom-0 left-0 right-0 w-full p-2 sm:p-5 lg:p-10 text-[0.9rem] sm:text-[1rem] text-dark dark:text-light [&_span]:mr-2 flex flex-row justify-between items-end"
+>
+  <div class="sm:inline-block text-left">
+    <span>version 2024 &reg; </span>
+  </div>
+  <div class="sm:inline-block text-right font-medium">
+    <span class="">Munich</span><br class="hidden sm:inline" />
+    <span id="local-date"></span><span id="local-time"></span>
+  </div>
+</footer>
+
+<script>
+  const date = document.querySelector("#local-date") as HTMLSpanElement;
+  const time = document.querySelector("#local-time") as HTMLSpanElement;
+
+  date.innerText = new Date().toLocaleDateString("de-DE");
+  time.innerText = new Date().toLocaleTimeString("de-DE");
+
+  let timeoutId: number | undefined;
+
+  const updateTime = () => {
+    clearTimeout(timeoutId);
+
+    time.innerText = new Date().toLocaleTimeString("de-DE", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    timeoutId = setTimeout(updateTime, 60000);
+  };
+
+  updateTime();
+</script>

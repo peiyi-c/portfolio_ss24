@@ -1,45 +1,49 @@
 ---
-// import styles 
-import '../styles/tailwind.css'
+// import styles
+import "../styles/tailwind.css";
 // import components
-import Navbar from "../components/Navbar.astro"
-import Main from '../components/Main';
-import Footer from "../components/Footer"
+import Navbar from "../components/Navbar.astro";
+import Main from "../components/Main";
+import Footer from "../components/Footer.astro";
 // types
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 const { title } = Astro.props;
 const { description } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<header>
-			<Navbar />
-		</header>
-		<Main client:load>
-			<slot /> <!-- different pages to be rendered here -->
-		</Main>
-		<Footer client:idle/>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <Navbar />
+    </header>
+    <Main client:load>
+      <slot />
+      <!-- different pages to be rendered here -->
+    </Main>
+    <Footer />
+  </body>
 </html>
 
 <script is:inline>
   const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) return localStorage.getItem("theme");
-    
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark";
-    
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme"))
+      return localStorage.getItem("theme");
+
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+      return "dark";
+
     return "light";
   })();
 
