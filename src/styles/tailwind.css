@@ -7,8 +7,16 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    font-family: Montserrat, Georgia, Verdana, Geneva, Tahoma, sans-serif;
+    --nav-h: 6rem;
+    --footer-h: 10rem;
+  }
   body {
-    @apply w-screen bg-light text-dark dark:bg-dark;
+    @apply w-screen bg-light text-dark dark:bg-dark overflow-x-hidden;
+    height: calc(100svh - var(--nav-h));
+    background-image: url("/src/images/layouts/bg.svg");
+    background-size: auto;
   }
   header,
   nav,
@@ -30,19 +38,89 @@
     @apply mb-8 text-[2.5rem] md:text-[3rem] lg:text-[3.55rem] font-bold capitalize text-center text-dark dark:text-light leading-[120%] tracking-[-0.03em];
   }
   .h2 {
-    @apply mb-5 text-[1.25rem] md:text-[1.85rem] lg:text-[2rem] font-semibold text-center text-dark dark:text-light leading-[150%];
+    @apply mb-6 text-[1.25rem] md:text-[1.85rem] lg:text-[2rem] font-semibold text-center text-dark dark:text-light leading-[150%];
   }
+  .h3 {
+    @apply mb-3 text-[1rem] md:text-[1.5rem] lg:text-[1.75rem] font-medium text-center text-dark dark:text-light;
+  }
+  .label {
+    @apply font-normal inline-block w-[5rem] text-[1rem] align-top;
+  }
+  .input {
+    @apply pl-3 pt-1 pb-2  w-[75%] lg:h-12 bg-transparent border-[0.2rem] border-dark dark:border-light rounded-xl placeholder:text-[0.85rem] placeholder:font-light placeholder:opacity-65;
+  }
+}
+
+@layer components {
   .btn {
-    @apply py-[18px] px-[50px] h-16 flex items-center justify-center text-base font-semibold bg-dark dark:bg-light text-white dark:text-dark hover:scale-105 transition-transform duration-150;
+    @apply rounded-lg hover:scale-105 transition-transform duration-200 ease-linear;
+  }
+  .btn-lg {
+    @apply p-10 h-4 flex items-center justify-center text-base font-semibold text-[1.3rem] md:text-[1.5rem] lg:text-[1.75rem] bg-dark dark:bg-light text-white dark:text-dark;
+  }
+  .btn-sm {
+    @apply p-8 h-[2.5rem] flex items-center justify-center text-base font-semibold text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] border-[0.25rem] border-dark dark:border-light text-dark dark:text-light;
+  }
+  .btn-form {
+    @apply px-4 py-2 md:p-4 text-base font-semibold text-[1.2rem] md:text-[1.5rem] border-[0.2rem] border-dark dark:border-light text-dark dark:text-light;
   }
 }
 
-:root {
-  font-family: Montserrat, Georgia, Verdana, Geneva, Tahoma, sans-serif;
-  --nav-h: 6rem;
-  --footer-h: 10rem;
-}
+@layer utilities {
+  form code {
+    @apply text-[1rem] font-semibold text-primary dark:text-primaryDark border-primary dark:border-primaryDark transition-transform ease-linear duration-500;
+  }
+  form code.success {
+    @apply text-[1.45rem] text-secondary dark:text-secondaryDark dark:border-secondaryDark;
+  }
+  form code.sending {
+    @apply text-space dark:text-spaceDark;
+    animation: blink infinite 2s;
+  }
+  form code.pending {
+    @apply text-transparent;
+  }
+  form code.failed {
+    @apply text-primary dark:text-primaryDark border-primary dark:border-primaryDark;
+  }
 
-body {
-  height: calc(100svh - var(--nav-h));
+  form button {
+    @apply transition-all ease-in duration-500;
+  }
+
+  form button.success {
+    @apply hidden;
+  }
+
+  form button.sending:disabled {
+    @apply opacity-20 transform-none cursor-wait;
+  }
+
+  form input {
+    @apply transition-colors ease-in duration-500;
+  }
+  form input[type="email"].invalid {
+    @apply text-primary dark:text-primaryDark border-primary dark:border-primaryDark;
+  }
+
+  form code.incomplete,
+  form .input:not([name="subject"]).incomplete {
+    @apply text-note dark:text-noteDark border-note dark:border-noteDark;
+  }
+
+  fieldset.success {
+    @apply hidden;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

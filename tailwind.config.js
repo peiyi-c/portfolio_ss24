@@ -20,6 +20,8 @@ export default {
         secondaryDark: "#C1FFD7",
         note: "#D9CAB3",
         noteDark: "#EFE3D0",
+        space: "#0088F8",
+        spaceDark: "#B8DFFF",
       },
     },
   },
