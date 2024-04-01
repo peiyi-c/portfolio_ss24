@@ -32,7 +32,7 @@
     @apply mt-24 w-screen h-full;
   }
   section {
-    @apply h-full w-full block p-5 md:p-10 lg:p-12;
+    @apply h-full w-full block p-5 md:p-10 lg:p-12 overflow-x-hidden;
   }
   .h1 {
     @apply mb-8 text-[2.5rem] md:text-[3rem] lg:text-[3.55rem] font-bold capitalize text-center text-dark dark:text-light leading-[120%] tracking-[-0.03em];

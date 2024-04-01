@@ -1,13 +1,61 @@
 ---
 // import Layout
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 // import components
-import AnimatedH1 from '../components/AnimatedH1';
+import SectionFade from "../components/SectionFade";
 ---
 
 <Layout title="About | Pei-Yi" description="About | Pei-Yi">
-  <section>
-    <AnimatedH1 text="About me" client:visible />
-    <h2 class="h2">Fueling Innovation with <b>curiosity</b>: Exploring Boundaries, Expanding Horizons.</h2>
-  </section>
-</Layout>../components/Animated1../components/AnimatedH1
+  <SectionFade className="py-10 lg:py-20" client:visible>
+    <h1 class="h1">About me</h1>
+
+    <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center">
+      <div
+        class="mb-5 flex-1 lg:self-start min-h-[10rem] md:min-h-[15rem] lg:min-h-[20rem]"
+      >
+        <h2 class="h2">My Tech Stack</h2>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-2">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SCSS</li>
+          <li>Tailwind</li>
+          <li>Bootstrap</li>
+
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React.js</li>
+          <li>Vue.js</li>
+
+          <li>Git</li>
+          <li>npm</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div
+        class="mb-5 flex-1 lg:self-start min-h-[10rem] md:min-h-[15rem] lg:min-h-[20rem]"
+      >
+        <h2 class="h2">Interpersonal skills</h2>
+        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-2">
+          <li>Communicator</li>
+          <li>Consistency</li>
+          <li>Curiousity</li>
+          <li>Empathy</li>
+          <li>Organization</li>
+          <li>Thoroughness</li>
+          <li>Restorative</li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row lg:items-baseline lg:justify-center lg:gap-10"
+    >
+      <h2 class="h2">Hobbies</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <li>Japanese Series</li>
+        <li>Bouldering</li>
+        <li>Yoga</li>
+      </ul>
+    </div>
+  </SectionFade>
+</Layout>
