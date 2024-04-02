@@ -1,15 +1,37 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 // import components
-import AnimatedH1 from '../components/AnimatedH1';
+import SectionFade from "../components/SectionFade";
+import ProjectCard from "../components/ProjectCard";
+import ProjectItem from "../components/ProjectItem";
 ---
 
 <Layout title="Projects | Pei-Yi" description="Pei-Yi frontend projects">
-	<section class="bg-pink-200">
-	<AnimatedH1 text="Explore my portfolio" client:visible />
-	<h2 class="h2">Where every project built with  
-		<span class="text-primary">&#9825;</span>&nbsp;
-	</h2>	
-	</section>
-</Layout>
+  <SectionFade className="py-10 lg:py-20 m-8" client:visible>
+    <h1 class="h1">Let's have some</h1>
+    <h2 class="h2">my recent projects</h2>
 
+    <div class="mb-10 lg:mb-0 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <ProjectCard
+        title="Project Title"
+        languages={[{ name: "React", liClass: "bg-[#FFCA28]", spanClass: "" }]}
+        screenshot=""
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum molLorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum mol"
+        repoLink="https://"
+        demoLink="https://"
+        client:load
+      />
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <ProjectItem
+        title="Project Title"
+        languages={[{ name: "React", liClass: "bg-[#53C1DE]", spanClass: "" }]}
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum molLorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum mol"
+        repoLink="https://"
+        demoLink="https://"
+        client:load
+      />
+    </div>
+  </SectionFade>
+</Layout>

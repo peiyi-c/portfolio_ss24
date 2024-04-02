@@ -64,9 +64,6 @@
   .btn-form {
     @apply px-4 py-2 md:p-4 text-base font-semibold text-[1.2rem] md:text-[1.5rem] border-[0.2rem] border-dark dark:border-light text-dark dark:text-light;
   }
-  .btn-code {
-    @apply px-[0.3rem] mx-[0.2rem] text-[0.7rem] md:text-[0.6rem] font-semibold inline-block bg-secondary dark:bg-secondaryDark text-light dark:text-dark rounded-[5px] shadow-md;
-  }
 }
 
 @layer utilities {
