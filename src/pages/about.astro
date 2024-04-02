@@ -3,59 +3,108 @@
 import Layout from "../layouts/Layout.astro";
 // import components
 import SectionFade from "../components/SectionFade";
+import SkillItem from "../components/SkillItem";
+import {
+  HTML,
+  CSS3,
+  SCSS,
+  Tailwind,
+  Bootstrap,
+  JavaScript,
+  TypeScript,
+  ReactIcon,
+  VueIcon,
+  GitIcon,
+  NpmIcon,
+  Postgresql,
+  Webpack,
+  ViteIcon,
+  AstroIcon,
+  VSCode,
+} from "../components/Icons";
 ---
 
 <Layout title="About | Pei-Yi" description="About | Pei-Yi">
   <SectionFade className="py-10 lg:py-20" client:visible>
     <h1 class="h1">About me</h1>
-
-    <div class="flex flex-col lg:flex-row lg:justify-center lg:items-center">
-      <div
-        class="mb-5 flex-1 lg:self-start min-h-[10rem] md:min-h-[15rem] lg:min-h-[20rem]"
-      >
-        <h2 class="h2">My Tech Stack</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-2">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SCSS</li>
-          <li>Tailwind</li>
-          <li>Bootstrap</li>
-
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React.js</li>
-          <li>Vue.js</li>
-
-          <li>Git</li>
-          <li>npm</li>
-          <li>SQL</li>
+    <!-- part 1 -->
+    <div class="[&_div]:mb-[3rem] md:[&_div]:mb-[5rem] [&_h3]:mb-4">
+      <h2 class="h2 text-primary dark:text-primaryDark font-bold">
+        My Technical Stack
+      </h2>
+      <!-- part 1.1 -->
+      <div class="">
+        <h3 class="h3">Language ‧ Library ‧ Framework</h3>
+        <ul
+          class="grid grid-flow-row grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5"
+        >
+          <SkillItem skillName="HTML"><HTML /></SkillItem>
+          <SkillItem skillName="CSS3"><CSS3 /></SkillItem>
+          <SkillItem skillName="SCSS"><SCSS /></SkillItem>
+          <SkillItem skillName="Tailwind"><Tailwind /></SkillItem>
+          <SkillItem skillName="Bootstrap"><Bootstrap /></SkillItem>
+          <SkillItem skillName="JavaScript"><JavaScript /></SkillItem>
+          <SkillItem skillName="TypeScript"><TypeScript /></SkillItem>
+          <SkillItem skillName="React"><ReactIcon /></SkillItem>
+          <SkillItem skillName="Vue"><VueIcon /></SkillItem>
+          <SkillItem skillName="Postgresql"
+            ><Postgresql className="p-[0.1rem]" /></SkillItem
+          >
         </ul>
       </div>
-      <div
-        class="mb-5 flex-1 lg:self-start min-h-[10rem] md:min-h-[15rem] lg:min-h-[20rem]"
-      >
-        <h2 class="h2">Interpersonal skills</h2>
-        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-2">
-          <li>Communicator</li>
-          <li>Consistency</li>
-          <li>Curiousity</li>
-          <li>Empathy</li>
-          <li>Organization</li>
-          <li>Thoroughness</li>
-          <li>Restorative</li>
+
+      <!-- part 1.2 -->
+      <div class="">
+        <h3 class="h3">Build Tools ‧ Manager ‧ Editor</h3>
+        <ul
+          class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5"
+        >
+          <SkillItem skillName="Vite"
+            ><ViteIcon className="p-[0.1rem]" /></SkillItem
+          >
+          <SkillItem skillName="Webpack"><Webpack /></SkillItem>
+          <SkillItem skillName="Astro"><AstroIcon /></SkillItem>
+          <SkillItem skillName="Git"><GitIcon /></SkillItem>
+          <SkillItem skillName="npm"><NpmIcon /></SkillItem>
+          <SkillItem skillName="VSCode"
+            ><VSCode className="p-[0.1rem]" /></SkillItem
+          >
         </ul>
       </div>
     </div>
 
     <div
-      class="flex flex-col lg:flex-row lg:items-baseline lg:justify-center lg:gap-10"
+      class="flex flex-col md:flex-row [&_div]:mb-[3rem] md:[&_div]:mb-[5rem] [&_h3]:mb-4"
     >
-      <h2 class="h2">Hobbies</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-3 gap-2">
-        <li>Japanese Series</li>
-        <li>Bouldering</li>
-        <li>Yoga</li>
-      </ul>
+      <!-- part 2 -->
+      <div class="flex-1">
+        <h2 class="h2 text-primary dark:text-primaryDark font-bold">
+          Strengths
+        </h2>
+        <ul
+          class="flex flex-wrap justify-center gap-5 text-[0.9rem] sm:text-[1rem] lg:text-[1.2rem]"
+        >
+          <li>Connectedness</li>
+          <li>Consistency</li>
+          <li>Empathy</li>
+          <li>Organization</li>
+          <li>Learner</li>
+          <li>Thoroughness</li>
+          <li>Restorative</li>
+        </ul>
+      </div>
+      <!-- part 3-->
+      <div class="flex-1">
+        <h2 class="h2 text-primary dark:text-primaryDark font-bold">Hobbies</h2>
+        <ul
+          class="flex flex-wrap justify-center gap-5 text-[0.9rem] sm:text-[1rem] lg:text-[1.2rem]"
+        >
+          <li>Japanese Series</li>
+          <li>Bouldering</li>
+          <li>Aerial Yoga</li>
+          <li>Yoga</li>
+        </ul>
+      </div>
     </div>
   </SectionFade>
 </Layout>

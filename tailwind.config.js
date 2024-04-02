@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       srcreens: {
-        xs: "320px",
+        xs: "400px",
       },
       fontFamily: {
         mont: ["Montserrat"],

@@ -32,7 +32,7 @@
     @apply mt-24 w-screen h-full;
   }
   section {
-    @apply h-full w-full block p-5 md:p-10 lg:p-12 overflow-x-hidden;
+    @apply min-h-full max-w-full block p-5 md:p-10 lg:p-12 overflow-x-hidden;
   }
   .h1 {
     @apply mb-8 text-[2.5rem] md:text-[3rem] lg:text-[3.55rem] font-bold capitalize text-center text-dark dark:text-light leading-[120%] tracking-[-0.03em];
@@ -41,7 +41,7 @@
     @apply mb-6 text-[1.25rem] md:text-[1.85rem] lg:text-[2rem] font-semibold text-center text-dark dark:text-light leading-[150%];
   }
   .h3 {
-    @apply mb-3 text-[1rem] md:text-[1.5rem] lg:text-[1.75rem] font-medium text-center text-dark dark:text-light;
+    @apply mb-3 text-[1rem] md:text-[1.5rem] lg:text-[1.55rem] font-medium text-center text-dark dark:text-light;
   }
   .label {
     @apply font-normal inline-block w-[5rem] text-[1rem] align-top;
@@ -63,6 +63,9 @@
   }
   .btn-form {
     @apply px-4 py-2 md:p-4 text-base font-semibold text-[1.2rem] md:text-[1.5rem] border-[0.2rem] border-dark dark:border-light text-dark dark:text-light;
+  }
+  .btn-code {
+    @apply px-[0.3rem] mx-[0.2rem] text-[0.7rem] md:text-[0.6rem] font-semibold inline-block bg-secondary dark:bg-secondaryDark text-light dark:text-dark rounded-[5px] shadow-md;
   }
 }
 
