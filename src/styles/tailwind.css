@@ -27,6 +27,30 @@
   }
   nav {
     @apply fixed inset-0 bg-light/85 dark:bg-dark/85 lg:bg-transparent dark:lg:bg-transparent text-[1.5rem];
+    opacity: 0.4;
+    transform: translateY(-100%);
+    transform-origin: bottom;
+    transition: opacity 1s ease;
+    z-index: 25;
+  }
+
+  nav.open {
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    nav {
+      height: var(--nav-h);
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      opacity: 1;
+      transform: translateY(0);
+    }
+    nav.open {
+      height: var(--nav-h);
+    }
   }
   main {
     @apply mt-24 w-screen h-full;

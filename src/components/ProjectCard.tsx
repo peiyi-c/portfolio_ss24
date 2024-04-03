@@ -35,8 +35,9 @@ const ProjectCard = ({
             {title}
           </h3>
           <ul className="row-start-2 col-span-4 md:col-span-2 md:row-span-1">
-            {languages.map((language) => (
+            {languages.map((language, index) => (
               <CodeItem
+                key={index}
                 itemName={language.name}
                 liClass={language.liClass}
                 spanClass={language.spanClass}

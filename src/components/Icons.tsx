@@ -381,19 +381,22 @@ export const MoonIcon = ({ className, ...rest }: IconProps) => (
   </motion.svg>
 );
 
-export const MenuIcon = () => {
-  const [isX, setIsX] = useState(false);
-  const handleClick = () => setIsX(!isX);
-
-  useEffect(() => {
-    let width = window.innerWidth || document.documentElement.clientWidth;
-    const setMenu = () => {
-      if (width < 1024) setIsX(false);
-    };
-    window.addEventListener("resize", setMenu);
-    return () => window.removeEventListener("resize", setMenu);
-  });
-
+type MenuIconProps = {
+  toggleMenu: boolean;
+  setToggleMenu: Function;
+  isX: boolean;
+  setIsX: Function;
+};
+export const MenuIcon = ({
+  toggleMenu,
+  setToggleMenu,
+  isX,
+  setIsX,
+}: MenuIconProps) => {
+  const handleClick = () => {
+    setIsX(!isX);
+    setToggleMenu(() => !toggleMenu);
+  };
   return (
     <button
       onClick={handleClick}
@@ -423,13 +426,10 @@ export const Name = ({ className, ...rest }: IconProps) => {
   const pathVariants = {
     initial: {
       opacity: 0.5,
-      pathLength: 0,
-      pathStroke: 0,
     },
     animate: {
       opacity: 1,
-      pathLength: 1,
-      pathStroke: 2,
+
       transition: {
         duration: 2.8,
         ease: "easeInOut",

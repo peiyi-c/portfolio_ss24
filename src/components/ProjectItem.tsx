@@ -27,8 +27,9 @@ const ProjectItem = ({
       </h3>
 
       <ul className="flex mb-3 row-span-1 col-span-6">
-        {languages.map((language) => (
+        {languages.map((language, index) => (
           <CodeItem
+            key={index}
             itemName={language.name}
             liClass={language.liClass}
             spanClass={language.spanClass}
