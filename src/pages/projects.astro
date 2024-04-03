@@ -2,36 +2,21 @@
 import Layout from "../layouts/Layout.astro";
 // import components
 import SectionFade from "../components/SectionFade";
-import ProjectCard from "../components/ProjectCard";
-import ProjectItem from "../components/ProjectItem";
+import ProjectCards from "../components/ProjectCards";
+import ProjectItems from "../components/ProjectItems";
 ---
 
 <Layout title="Projects | Pei-Yi" description="Pei-Yi frontend projects">
   <SectionFade className="py-10 lg:py-20 m-8" client:visible>
     <h1 class="h1">Let's have some</h1>
-    <h2 class="h2">my recent projects</h2>
+    <h2 class="h2">my projects</h2>
 
-    <div class="mb-10 lg:mb-0 grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <ProjectCard
-        title="Project Title"
-        languages={[{ name: "React", liClass: "bg-[#FFCA28]", spanClass: "" }]}
-        screenshot=""
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum molLorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum mol"
-        repoLink="https://"
-        demoLink="https://"
-        client:load
-      />
+    <div class="mb-10 lg:mb-0 grid grid-cols-1 gap-8">
+      <ProjectCards client:load />
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <ProjectItem
-        title="Title"
-        languages={[{ name: "React", liClass: "bg-[#53C1DE]", spanClass: "" }]}
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum molLorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil itaque dolores doloribus debitis illum mol"
-        repoLink="https://"
-        demoLink="https://"
-        client:load
-      />
+      <ProjectItems client:load />
     </div>
   </SectionFade>
 </Layout>

@@ -5,8 +5,10 @@ type LanguagesType = {
   [key: string]: string;
 };
 
-type ProjectItemProps = {
+export type ProjectItemProps = {
+  id: number;
   title: string;
+  subtitle: string;
   languages: LanguagesType[];
   description: string;
   repoLink: string;
@@ -15,6 +17,7 @@ type ProjectItemProps = {
 
 const ProjectItem = ({
   title,
+  subtitle,
   languages,
   description,
   repoLink,
@@ -22,9 +25,12 @@ const ProjectItem = ({
 }: ProjectItemProps) => {
   return (
     <div className="w-full p-5 lg:my-6 border-[0.2rem] border-dark dark:border-light text-dark dark:text-light rounded-[1.5rem] grid grid-rows-5 grid-cols-6 items-center lg:grid-rows-4">
-      <h3 className="lg:text-left self-start text-[1.2rem] md:text-[1.3rem] font-semibold row-span-1 col-span-6 lg:col-span-5">
-        {title}
-      </h3>
+      <div className="lg:text-left self-start row-span-1 col-span-6 lg:col-span-5">
+        <h3 className=" text-[1.2rem] md:text-[1.3rem] font-semibold ">
+          {title}
+        </h3>
+        <h4>{subtitle}</h4>
+      </div>
 
       <ul className="flex mb-3 row-span-1 col-span-6">
         {languages.map((language, index) => (
@@ -44,12 +50,12 @@ const ProjectItem = ({
       {/* buttons */}
       <div className="flex flex-row row-span-1 col-span-2 col-start-1 lg:col-start-6 lg:row-start-1">
         <button className="btn w-8 mx-1">
-          <a href={repoLink}>
+          <a href={repoLink} target="_blank">
             <GithubIcon />
           </a>
         </button>
         <button className="btn text-[1.7rem] mx-1">
-          <a href={demoLink}>
+          <a href={demoLink} target="_blank">
             <GlobeIcon />
           </a>
         </button>

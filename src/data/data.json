@@ -1,0 +1,133 @@
+{
+  "projectCards": [
+    {
+      "id": 1,
+      "title": "Thread Clone",
+      "subtitle": "social media platform",
+      "languages": [
+        { "name": "Firebase", "liClass": "bg-[#FFCA28]", "spanClass": "" },
+        { "name": "React", "liClass": "bg-[#53C1DE]", "spanClass": "" },
+        {
+          "name": "React Router",
+          "liClass": "bg-[#53C1DE]",
+          "spanClass": "text-white"
+        },
+        { "name": "zustand", "liClass": "bg-[#FFCA28]", "spanClass": "" },
+        {
+          "name": "Chakra UI",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        },
+        {
+          "name": "Swiper.js",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        },
+        {
+          "name": "CRUD",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        }
+      ],
+      "screenshot": "../src/images/projects/threads-clone-1.png",
+      "description": "To get started, you need to create an account with an e-amil and a password. After that, you can interact with other users by sharing posts, photos and videos.",
+      "repoLink": "https://github.com/peiyi-c/threads-clone",
+      "demoLink": "https://threads-clone-silk-five.vercel.app/@Emily.Swift"
+    },
+    {
+      "id": 2,
+      "title": "Where in the World?",
+      "subtitle": "rest countries API",
+      "languages": [
+        { "name": "React", "liClass": "bg-[#53C1DE]", "spanClass": "" },
+        { "name": "Axios", "liClass": "bg-[#FFCA28]", "spanClass": "" },
+
+        {
+          "name": "React Router",
+          "liClass": "bg-[#53C1DE]",
+          "spanClass": "text-white"
+        },
+        {
+          "name": "React Router Hash Link",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        },
+        {
+          "name": "Countup.js",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        },
+        {
+          "name": "animate.css",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        }
+      ],
+      "screenshot": "../src/images/projects/country-1.png",
+      "description": "User can see all countries from the data source and search for a country by keyword, filter countries by region. Country card shows see more detailed information on a separate page. Light and dark mode available",
+      "repoLink": "https://github.com/peiyi-c/Frontend_Mentor/tree/main/20231025_rest_countries",
+      "demoLink": "https://20231025-rest-country.netlify.app/"
+    }
+  ],
+  "projectItems": [
+    {
+      "id": 1,
+      "title": "Supernova Black",
+      "subtitle": "candidate portfolio",
+      "languages": [
+        { "name": "React", "liClass": "bg-[#53C1DE]", "spanClass": "" },
+        { "name": "API", "liClass": "bg-[#FFCA28]", "spanClass": "" },
+
+        {
+          "name": "Mobile-first workflow",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        }
+      ],
+      "screenshot": "../src/images/projects/supernova-1.png",
+      "description": "Candidate Supernova Black is running for mayor in Meow-Li. He has created this website with some animations to get more support!",
+      "repoLink": "https://github.com/peiyi-c/2023-F2E-mission1",
+      "demoLink": "https://peiyi-c.github.io/2023-F2E-mission1/"
+    },
+    {
+      "id": 2,
+      "title": "Web Calculator",
+      "subtitle": "with color themes",
+      "languages": [
+        { "name": "TypeScript", "liClass": "bg-[#53C1DE]", "spanClass": "" },
+        { "name": "SCSS", "liClass": "bg-[#FFCA28]", "spanClass": "" },
+        {
+          "name": "React",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        }
+      ],
+      "screenshot": "../src/images/projects/calcultor-1.png",
+      "description": "This app can perform mathmatical operations like addition, subtraction, multiplication, and division. And even for more joy, use can adjust color theme based on their preference.",
+      "repoLink": "https://github.com/peiyi-c/Frontend_Mentor/tree/main/20231013_calculator-app",
+      "demoLink": "https://third-toes.surge.sh/"
+    },
+    {
+      "id": 3,
+      "title": "Backstage Talks",
+      "subtitle": "A Frontend Practice Project",
+      "languages": [
+        { "name": "SCSS", "liClass": "bg-[#FFCA28]", "spanClass": "" },
+        {
+          "name": "React",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        },
+        {
+          "name": "React Scroll",
+          "liClass": "bg-[#FFCA28]",
+          "spanClass": ""
+        }
+      ],
+      "screenshot": "../src/images/projects/calcultor-1.png",
+      "description": "A replica of Backstage Talks - Magazine Archive website. With special scroll effect",
+      "repoLink": "https://github.com/peiyi-c/Frontend_Practice/tree/main/20230907_backstage-talks",
+      "demoLink": "https://envious-kittens.surge.sh/"
+    }
+  ]
+}
