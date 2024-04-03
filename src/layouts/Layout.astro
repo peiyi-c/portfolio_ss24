@@ -2,9 +2,12 @@
 // import styles
 import "../styles/tailwind.css";
 // import components
-import Navbar from "../components/Navbar.astro";
+import NavbarReact from "../components/NavbarReact";
 import Main from "../components/Main";
 import Footer from "../components/Footer.astro";
+// add view transitions
+import { ViewTransitions } from "astro:transitions";
+
 // types
 interface Props {
   title: string;
@@ -23,34 +26,38 @@ const { description } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <header>
-      <Navbar />
+      <NavbarReact client:load />
     </header>
     <Main client:load>
       <slot />
       <!-- different pages to be rendered here -->
     </Main>
     <Footer />
+    <script is:inline>
+      // theme
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        )
+          return localStorage.getItem("theme");
+
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+          return "dark";
+
+        return "light";
+      })();
+
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+      window.localStorage.setItem("theme", theme);
+    </script>
   </body>
 </html>
-
-<script is:inline>
-  const theme = (() => {
-    if (typeof localStorage !== "undefined" && localStorage.getItem("theme"))
-      return localStorage.getItem("theme");
-
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches)
-      return "dark";
-
-    return "light";
-  })();
-
-  if (theme === "light") {
-    document.documentElement.classList.remove("dark");
-  } else {
-    document.documentElement.classList.add("dark");
-  }
-  window.localStorage.setItem("theme", theme);
-</script>
