@@ -1,10 +1,11 @@
 import CodeItem from "./CodeItem";
 import { GithubIcon, GlobeIcon } from "./Icons";
 
-type LanguagesType = {
-  [key: string]: string;
-};
+// type LanguagesType = {
+//   [key: string]: string;
+// };
 
+type LanguagesType = string;
 export type ProjectItemProps = {
   id: number;
   title: string;
@@ -16,6 +17,7 @@ export type ProjectItemProps = {
 };
 
 const ProjectItem = ({
+  id,
   title,
   subtitle,
   languages,
@@ -33,13 +35,8 @@ const ProjectItem = ({
       </div>
 
       <ul className="flex mb-3 row-span-1 col-span-6">
-        {languages.map((language, index) => (
-          <CodeItem
-            key={index}
-            itemName={language.name}
-            liClass={language.liClass}
-            spanClass={language.spanClass}
-          />
+        {languages.map((language) => (
+          <CodeItem key={id} itemName={language} />
         ))}
       </ul>
 
