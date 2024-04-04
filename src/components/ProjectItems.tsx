@@ -10,9 +10,9 @@ const ProjectItems = () => {
 
   return (
     <>
-      {items.map((item) => (
+      {items.map((item, index) => (
         <ProjectItem
-          key={item.id}
+          key={`${item.id}-${index}-${item.title}`}
           id={item.id}
           title={item.title}
           subtitle={item.subtitle}

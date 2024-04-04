@@ -1,7 +1,7 @@
 {
   "projectCards": [
     {
-      "id": 5,
+      "id": "project-5",
       "title": "Thread Clone",
       "subtitle": "social media platform",
       "languages": [
@@ -19,7 +19,7 @@
       "demoLink": "https://threads-clone-silk-five.vercel.app/@Emily.Swift"
     },
     {
-      "id": 4,
+      "id": "project-4",
       "title": "Where in the World?",
       "subtitle": "rest countries API",
       "languages": [
@@ -38,7 +38,7 @@
   ],
   "projectItems": [
     {
-      "id": 3,
+      "id": "project-3",
       "title": "Supernova Black",
       "subtitle": "candidate portfolio",
       "languages": ["React", "API"],
@@ -48,7 +48,7 @@
       "demoLink": "https://peiyi-c.github.io/2023-F2E-mission1/"
     },
     {
-      "id": 2,
+      "id": "project-2",
       "title": "Web Calculator",
       "subtitle": "with color themes",
       "languages": ["typescript", "scss", "react"],
@@ -58,7 +58,7 @@
       "demoLink": "https://third-toes.surge.sh/"
     },
     {
-      "id": 1,
+      "id": "project-1",
       "title": "Backstage Talks",
       "subtitle": "A Frontend Practice Project",
       "languages": ["scss", "react", "react-scroll"],

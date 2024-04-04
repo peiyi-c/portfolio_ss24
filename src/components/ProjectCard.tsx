@@ -2,7 +2,7 @@ import CodeItem from "./CodeItem";
 import { GithubIcon, GlobeIcon } from "./Icons";
 
 export type ProjectCardProps = {
-  id?: number;
+  id?: string;
   title: string;
   subtitle?: string;
   languages: string[];
@@ -44,7 +44,7 @@ const ProjectCard = ({
 
           <ul className="row-start-2 row-span-2 col-span-4 md:col-span-2 md:row-span-1 xl:col-span-3 lg:text-left">
             {languages.map((language) => (
-              <CodeItem key={id} itemName={language} />
+              <CodeItem key={`${language}-${id}`} itemName={language} />
             ))}
           </ul>
           <p className="sm:row-start-4 md:row-span-2 lg:my-2 row-span-4 col-span-4 lg:text-left ">

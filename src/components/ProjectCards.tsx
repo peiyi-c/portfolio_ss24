@@ -10,9 +10,9 @@ const ProjectCards = () => {
 
   return (
     <>
-      {cards.map((card) => (
+      {cards.map((card, index) => (
         <ProjectCard
-          key={card.id}
+          key={`${card.id}-${index}-${card.title}`}
           id={card.id}
           title={card.title}
           subtitle={card.subtitle}

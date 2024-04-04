@@ -2,7 +2,7 @@ import CodeItem from "./CodeItem";
 import { GithubIcon, GlobeIcon } from "./Icons";
 
 export type ProjectItemProps = {
-  id: number;
+  id: string;
   title: string;
   subtitle: string;
   languages: string[];
@@ -31,7 +31,7 @@ const ProjectItem = ({
 
       <ul className="flex mb-3 row-span-1 col-span-6">
         {languages.map((language) => (
-          <CodeItem key={id} itemName={language} />
+          <CodeItem key={`${language}-${id}`} itemName={language} />
         ))}
       </ul>
 
