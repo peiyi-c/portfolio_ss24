@@ -52,7 +52,10 @@ const ProjectCard = ({
           </p>
         </div>
         <div className="lg:flex lg:justify-end">
-          <button className="btn m-2 p-2 bg-primary dark:bg-primaryDark rounded-md shadow-md group">
+          <button
+            id="repository-button"
+            className="btn m-2 p-2 bg-primary dark:bg-primaryDark rounded-md shadow-md group"
+          >
             <a
               href={repoLink}
               className="flex items-center text-[1.1rem] text-light dark:text-dark gap-2 group-hover:font-bold"
@@ -62,7 +65,10 @@ const ProjectCard = ({
               <GithubIcon />
             </a>
           </button>
-          <button className="btn m-2 p-2 bg-space dark:bg-spaceDark rounded-md shadow-md group">
+          <button
+            id="demolink-button"
+            className="btn m-2 p-2 bg-space dark:bg-spaceDark rounded-md shadow-md group"
+          >
             <a
               href={demoLink}
               className="flex items-center text-[1.1rem] text-light dark:text-dark gap-2 group-hover:font-bold"

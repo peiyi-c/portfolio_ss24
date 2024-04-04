@@ -142,6 +142,7 @@ const ContactForm = () => {
 
       <div className="mb-2 [&_button]:mx-5 [&_button]:my-1 ">
         <button
+          id="send-button"
           className={`btn btn-form ${sendStatus}`}
           type="submit"
           disabled={
@@ -155,6 +156,7 @@ const ContactForm = () => {
           Send
         </button>
         <button
+          id="reset-button"
           className={`btn btn-form ${sendStatus}`}
           type="reset"
           disabled={

@@ -41,12 +41,12 @@ const ProjectItem = ({
 
       {/* buttons */}
       <div className="flex flex-row row-span-1 col-span-2 col-start-1 lg:col-start-6 lg:row-start-1">
-        <button className="btn w-8 mx-1">
+        <button id="github-button" className="btn w-8 mx-1">
           <a href={repoLink} target="_blank">
             <GithubIcon />
           </a>
         </button>
-        <button className="btn text-[1.7rem] mx-1">
+        <button id="demolink-button" className="btn text-[1.7rem] mx-1">
           <a href={demoLink} target="_blank">
             <GlobeIcon />
           </a>

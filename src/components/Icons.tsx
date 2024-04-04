@@ -3,10 +3,10 @@ type IconProps = {
 };
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 export const GithubIcon = ({ className, ...rest }: IconProps) => (
   <motion.svg
+    id="github-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -26,6 +26,7 @@ export const GithubIcon = ({ className, ...rest }: IconProps) => (
 
 export const LinkedInIcon = ({ className, ...rest }: IconProps) => (
   <motion.svg
+    id="linkedin-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -45,6 +46,7 @@ export const LinkedInIcon = ({ className, ...rest }: IconProps) => (
 
 export const SunIcon = ({ className, ...rest }: IconProps) => (
   <motion.svg
+    id="sun-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -225,6 +227,7 @@ export const SunIcon = ({ className, ...rest }: IconProps) => (
 
 export const MoonIcon = ({ className, ...rest }: IconProps) => (
   <motion.svg
+    id="moon-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -438,6 +441,7 @@ export const Name = ({ className, ...rest }: IconProps) => {
   };
   return (
     <svg
+      id="name-icon"
       xmlns="http://www.w3.org/2000/svg"
       width={343}
       height={145}
@@ -549,6 +553,7 @@ export const SCSS = ({ className, ...rest }: IconProps) => (
 );
 export const Tailwind = ({ className, ...rest }: IconProps) => (
   <svg
+    id="tailwind-icon"
     width="32px"
     height="32px"
     viewBox="0 0 32 32"
@@ -576,6 +581,7 @@ export const Tailwind = ({ className, ...rest }: IconProps) => (
 );
 export const Bootstrap = ({ className, ...rest }: IconProps) => (
   <svg
+    id="bootstrap-icon"
     width="32px"
     height="32px"
     viewBox="0 0 256 256"
@@ -632,6 +638,7 @@ export const JavaScript = ({ className, ...rest }: IconProps) => (
 );
 export const TypeScript = ({ className, ...rest }: IconProps) => (
   <svg
+    id="typescript-icon"
     xmlns="http://www.w3.org/2000/svg"
     aria-label="TypeScript"
     role="img"
@@ -659,6 +666,7 @@ export const TypeScript = ({ className, ...rest }: IconProps) => (
 );
 export const ReactIcon = ({ className, ...rest }: IconProps) => (
   <svg
+    id="react-icon"
     width="32px"
     height="32px"
     viewBox="0 0 32 32"
@@ -689,6 +697,7 @@ export const ReactIcon = ({ className, ...rest }: IconProps) => (
 );
 export const VueIcon = ({ className, ...rest }: IconProps) => (
   <svg
+    id="vue-icon"
     width="32px"
     height="32px"
     viewBox="0 0 32 32"
@@ -714,6 +723,7 @@ export const VueIcon = ({ className, ...rest }: IconProps) => (
 );
 export const GitIcon = ({ className, ...rest }: IconProps) => (
   <svg
+    id="git-icon"
     width="32px"
     height="32px"
     viewBox="0 0 32 32"
@@ -776,6 +786,7 @@ export const NpmIcon = ({ className, ...rest }: IconProps) => (
 );
 export const Postgresql = ({ className, ...rest }: IconProps) => (
   <svg
+    id="postgresql-icon"
     width="32px"
     height="32px"
     viewBox="-4 0 264 264"
@@ -820,6 +831,7 @@ export const Postgresql = ({ className, ...rest }: IconProps) => (
 );
 export const Webpack = ({ className, ...rest }: IconProps) => (
   <svg
+    id="webpack-icon"
     width="32px"
     height="32px"
     viewBox="-17 0 290 290"
@@ -856,6 +868,7 @@ export const Webpack = ({ className, ...rest }: IconProps) => (
 );
 export const ViteIcon = ({ className, ...rest }: IconProps) => (
   <svg
+    id="vite-icon"
     width="32px"
     height="32px"
     viewBox="0 0 32 32"
@@ -912,6 +925,7 @@ export const ViteIcon = ({ className, ...rest }: IconProps) => (
 );
 export const AstroIcon = ({ className, ...rest }: IconProps) => (
   <svg
+    id="astro-icon"
     width="32px"
     height="32px"
     viewBox="0 0 32 32"
@@ -940,6 +954,7 @@ export const AstroIcon = ({ className, ...rest }: IconProps) => (
 );
 export const VSCode = ({ className, ...rest }: IconProps) => (
   <svg
+    id="vscode-icon"
     width="32px"
     height="32px"
     viewBox="0 0 32 32"
@@ -979,6 +994,7 @@ export const VSCode = ({ className, ...rest }: IconProps) => (
 );
 export const GlobeIcon = ({ className, ...rest }: IconProps) => (
   <motion.svg
+    id="globe-icon"
     fill="currentColor"
     width="1em"
     height="1em"
