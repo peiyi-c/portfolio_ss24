@@ -1,16 +1,11 @@
 import CodeItem from "./CodeItem";
 import { GithubIcon, GlobeIcon } from "./Icons";
 
-// type LanguagesType = {
-//   [key: string]: string;
-// };
-
-type LanguagesType = string;
 export type ProjectItemProps = {
   id: number;
   title: string;
   subtitle: string;
-  languages: LanguagesType[];
+  languages: string[];
   description: string;
   repoLink: string;
   demoLink: string;

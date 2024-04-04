@@ -1,17 +1,11 @@
 import CodeItem from "./CodeItem";
 import { GithubIcon, GlobeIcon } from "./Icons";
 
-// type LanguagesType = {
-//   [key: string]: string;
-// };
-
-type LanguagesType = string;
-
 export type ProjectCardProps = {
   id?: number;
   title: string;
   subtitle?: string;
-  languages: LanguagesType[];
+  languages: string[];
   screenshot: string;
   description: string;
   repoLink: string;
@@ -33,7 +27,7 @@ const ProjectCard = ({
       {/* wrapper 1 */}
       <div className="cursor-pointer ">
         <img
-          src={screenshot}
+          src={`./projects/project-${screenshot}.png`}
           alt={`project-${id}-screenshot`}
           className="object-cover w-[60svw] sm:w-[50svw] md:w-[20rem] rounded-lg"
         />
