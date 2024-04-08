@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 const useThemeSwitcher = () => {
-  const [mode, setMode] = useState("");
+  const initialMode = "light";
+  const [mode, setMode] = useState(initialMode);
 
   useEffect(() => {
     const local = window.localStorage.getItem("theme");
@@ -40,7 +41,7 @@ const useThemeSwitcher = () => {
     }
   }, [mode]);
 
-  return [mode, setMode];
+  return { mode, setMode };
 };
 
 export default useThemeSwitcher;

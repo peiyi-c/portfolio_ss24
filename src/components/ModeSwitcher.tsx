@@ -1,18 +1,19 @@
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
-import { SunIcon, MoonIcon } from "../components/Icons";
+import { LightBulbDark, LightBulb } from "./Icons";
 
 const ModeSwitcher = () => {
-  const [mode, setMode] = useThemeSwitcher();
+  const { mode, setMode } = useThemeSwitcher();
+
   return (
     <button
       id="theme-button"
       onClick={() => setMode(mode === "light" ? "dark" : "light")}
-      className="w-8 rounded-full dark:bg-light"
+      className="w-9 mt-2 text-dark dark:text-light"
       type="button"
       role="switch"
       aria-checked={mode === "dark" ? true : false}
     >
-      {mode === "light" ? <MoonIcon /> : <SunIcon />}
+      {mode === "light" ? <LightBulbDark /> : <LightBulb />}
     </button>
   );
 };

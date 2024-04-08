@@ -44,343 +44,119 @@ export const LinkedInIcon = ({ className, ...rest }: IconProps) => (
   </motion.svg>
 );
 
-export const SunIcon = ({ className, ...rest }: IconProps) => (
+export const LightBulbDark = ({ className, ...rest }: IconProps) => (
   <motion.svg
-    id="sun-icon"
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    {...rest}
+    width={40}
+    height={40}
+    viewBox="0 0 800 908"
+    fill="none"
     className={`w-full h-auto ${className}`}
     whileHover={{ y: -2 }}
     whileTap={{ scale: 1.1 }}
+    {...rest}
   >
-    <g
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-    >
-      <g strokeDasharray="2">
-        <path d="M12 21v1M21 12h1M12 3v-1M3 12h-1">
-          <animate
-            fill="freeze"
-            attributeName="stroke-dashoffset"
-            dur="0.2s"
-            values="4;2"
-          />
-        </path>
-        <path d="M18.5 18.5l0.5 0.5M18.5 5.5l0.5 -0.5M5.5 5.5l-0.5 -0.5M5.5 18.5l-0.5 0.5">
-          <animate
-            fill="freeze"
-            attributeName="stroke-dashoffset"
-            begin="0.2s"
-            dur="0.2s"
-            values="4;2"
-          />
-        </path>
-      </g>
-      <path
-        fill="currentColor"
-        d="M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z"
-        opacity="0"
-      >
-        <set attributeName="opacity" begin="0.5s" to="1" />
-      </path>
-    </g>
-    <g fill="currentColor" fillOpacity="0">
-      <path d="m15.22 6.03l2.53-1.94L14.56 4L13.5 1l-1.06 3l-3.19.09l2.53 1.94l-.91 3.06l2.63-1.81l2.63 1.81z">
-        <animate
-          id="lineMdSunnyFilledLoopToMoonFilledLoopTransition0"
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="0.6s;lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+6s"
-          dur="0.4s"
-          values="0;1"
-        />
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+2.2s"
-          dur="0.4s"
-          values="1;0"
-        />
-      </path>
-      <path d="M13.61 5.25L15.25 4l-2.06-.05L12.5 2l-.69 1.95L9.75 4l1.64 1.25l-.59 1.98l1.7-1.17l1.7 1.17z">
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+3s"
-          dur="0.4s"
-          values="0;1"
-        />
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+5.2s"
-          dur="0.4s"
-          values="1;0"
-        />
-      </path>
-      <path d="M19.61 12.25L21.25 11l-2.06-.05L18.5 9l-.69 1.95l-2.06.05l1.64 1.25l-.59 1.98l1.7-1.17l1.7 1.17z">
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+0.4s"
-          dur="0.4s"
-          values="0;1"
-        />
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+2.8s"
-          dur="0.4s"
-          values="1;0"
-        />
-      </path>
-      <path d="m20.828 9.731l1.876-1.439l-2.366-.067L19.552 6l-.786 2.225l-2.366.067l1.876 1.439L17.601 12l1.951-1.342L21.503 12z">
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+3.4s"
-          dur="0.4s"
-          values="0;1"
-        />
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="lineMdSunnyFilledLoopToMoonFilledLoopTransition0.begin+5.6s"
-          dur="0.4s"
-          values="1;0"
-        />
-      </path>
-    </g>
-    <mask id="lineMdSunnyFilledLoopToMoonFilledLoopTransition1">
-      <circle cx="12" cy="12" r="12" fill="#fff" />
-      <circle cx="22" cy="2" r="3" fill="#fff">
-        <animate
-          fill="freeze"
-          attributeName="cx"
-          begin="0.1s"
-          dur="0.4s"
-          values="22;18"
-        />
-        <animate
-          fill="freeze"
-          attributeName="cy"
-          begin="0.1s"
-          dur="0.4s"
-          values="2;6"
-        />
-        <animate
-          fill="freeze"
-          attributeName="r"
-          begin="0.1s"
-          dur="0.4s"
-          values="3;12"
-        />
-      </circle>
-      <circle cx="22" cy="2" r="1">
-        <animate
-          fill="freeze"
-          attributeName="cx"
-          begin="0.1s"
-          dur="0.4s"
-          values="22;18"
-        />
-        <animate
-          fill="freeze"
-          attributeName="cy"
-          begin="0.1s"
-          dur="0.4s"
-          values="2;6"
-        />
-        <animate
-          fill="freeze"
-          attributeName="r"
-          begin="0.1s"
-          dur="0.4s"
-          values="1;10"
-        />
-      </circle>
-    </mask>
-    <circle
-      cx="12"
-      cy="12"
-      r="6"
-      fill="currentColor"
-      mask="url(#lineMdSunnyFilledLoopToMoonFilledLoopTransition1)"
-    >
-      <set attributeName="opacity" begin="0.5s" to="0" />
-      <animate
-        fill="freeze"
-        attributeName="r"
-        begin="0.1s"
-        dur="0.4s"
-        values="6;10"
+    <g id="light-bulb-dark-lines">
+      <line
+        id="light-bulb-dark-line-3"
+        x1={394.354}
+        y1={789.642}
+        x2={395.4}
+        y2={877.69}
+        stroke="currentColor"
+        strokeWidth={60}
+        strokeLinecap="round"
       />
-    </circle>
+      <line
+        id="light-bulb-dark-line-1"
+        x1={677.147}
+        y1={703.137}
+        x2={746.137}
+        y2={757.853}
+        stroke="currentColor"
+        strokeWidth={60}
+        strokeLinecap="round"
+      />
+      <line
+        id="light-bulb-dark-line-2"
+        x1={119.446}
+        y1={697.426}
+        x2={57.4261}
+        y2={759.933}
+        stroke="currentColor"
+        strokeWidth={60}
+        strokeLinecap="round"
+      />
+    </g>
+    <path
+      id="light-bulb-dark"
+      d="M428.85 734.614C485.512 729.003 538.513 704.052 578.943 663.959C619.373 623.865 644.765 571.074 650.85 514.461C654.071 474.776 647.558 434.904 631.873 398.308C616.189 361.712 591.809 329.497 560.85 304.461C551.963 297.441 544.766 288.517 539.786 278.346C534.807 268.175 532.174 257.016 532.08 245.692V244.461C532.081 236.315 530.464 228.249 527.324 220.732C524.183 213.216 519.581 206.397 513.785 200.673C507.989 194.948 501.114 190.431 493.559 187.385C486.004 184.338 477.919 182.821 469.773 182.923H331.311C323.165 182.821 315.08 184.338 307.525 187.385C299.97 190.431 293.095 194.948 287.299 200.673C281.503 206.397 276.901 213.216 273.76 220.732C270.62 228.249 269.003 236.315 269.003 244.461V245.692C268.91 257.016 266.276 268.175 261.297 278.346C256.318 288.517 249.12 297.441 240.234 304.461C212.031 327.133 189.216 355.788 173.439 388.354C157.661 420.919 149.315 456.583 149.003 492.769C148.234 636.153 276.85 750.153 428.85 734.614ZM292.234 112H507.619C513.984 112 520.089 109.471 524.589 104.97C529.09 100.47 531.619 94.3651 531.619 87.9999C531.578 68.9168 523.979 50.627 510.486 37.1332C496.992 23.6394 478.702 16.0406 459.619 16H339.619C320.536 16.0406 302.246 23.6394 288.752 37.1332C275.258 50.627 267.66 68.9168 267.619 87.9999C267.618 91.2041 268.258 94.376 269.503 97.3287C270.747 100.281 272.57 102.955 274.864 105.192C277.159 107.429 279.878 109.183 282.861 110.353C285.844 111.522 289.031 112.082 292.234 112Z"
+      fill="currentColor"
+    />
   </motion.svg>
 );
 
-export const MoonIcon = ({ className, ...rest }: IconProps) => (
+export const LightBulb = ({ className, ...rest }: IconProps) => (
   <motion.svg
-    id="moon-icon"
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    {...rest}
+    width={40}
+    height={40}
+    viewBox="0 0 800 956"
+    fill="none"
     className={`w-full h-auto ${className}`}
     whileHover={{ y: -2 }}
     whileTap={{ scale: 1.1 }}
+    {...rest}
   >
-    <rect x="0" y="0" width="24" height="24" fill="rgba(255, 255, 255, 0)" />
-    <g
-      fill="none"
-      stroke="currentColor"
-      strokeDasharray="2"
-      strokeDashoffset="2"
-      strokeLinecap="round"
-      strokeWidth="2"
-    >
-      <path d="M0 0">
-        <animate
-          fill="freeze"
-          attributeName="d"
-          begin="1.2s"
-          dur="0.2s"
-          values="M12 19v1M19 12h1M12 5v-1M5 12h-1;M12 21v1M21 12h1M12 3v-1M3 12h-1"
-        />
-        <animate
-          fill="freeze"
-          attributeName="stroke-dashoffset"
-          begin="1.2s"
-          dur="0.2s"
-          values="2;0"
-        />
-      </path>
-      <path d="M0 0">
-        <animate
-          fill="freeze"
-          attributeName="d"
-          begin="1.5s"
-          dur="0.2s"
-          values="M17 17l0.5 0.5M17 7l0.5 -0.5M7 7l-0.5 -0.5M7 17l-0.5 0.5;M18.5 18.5l0.5 0.5M18.5 5.5l0.5 -0.5M5.5 5.5l-0.5 -0.5M5.5 18.5l-0.5 0.5"
-        />
-        <animate
-          fill="freeze"
-          attributeName="stroke-dashoffset"
-          begin="1.5s"
-          dur="1.2s"
-          values="2;0"
-        />
-      </path>
-      <animateTransform
-        attributeName="transform"
-        dur="30s"
-        repeatCount="indefinite"
-        type="rotate"
-        values="0 12 12;360 12 12"
+    <g id="light-bulb-light-lines">
+      <line
+        id="light-bulb-light-line-3"
+        x1={384.354}
+        y1={837.641}
+        x2={385.4}
+        y2={925.689}
+        stroke="currentColor"
+        strokeWidth={60}
+        strokeLinecap="round"
       />
-    </g>
-    <g fill="currentColor">
-      <path d="M15.22 6.03L17.75 4.09L14.56 4L13.5 1L12.44 4L9.25 4.09L11.78 6.03L10.87 9.09L13.5 7.28L16.13 9.09L15.22 6.03Z">
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          dur="0.4s"
-          values="1;0"
+      <line
+        id="light-bulb-light-line-1"
+        x1={667.147}
+        y1={751.137}
+        x2={736.137}
+        y2={805.853}
+        stroke="currentColor"
+        strokeWidth={60}
+        strokeLinecap="round"
+      />
+      <g id="light-bulb-light-line-2" filter="url(#filter0_b_1_2)">
+        <line
+          x1={109.446}
+          y1={745.426}
+          x2={47.4261}
+          y2={807.933}
+          stroke="currentColor"
+          strokeWidth={60}
+          strokeLinecap="round"
         />
-      </path>
-      <path d="M19.61 12.25L21.25 11L19.19 10.95L18.5 9L17.81 10.95L15.75 11L17.39 12.25L16.8 14.23L18.5 13.06L20.2 14.23L19.61 12.25Z">
-        <animate
-          fill="freeze"
-          attributeName="fill-opacity"
-          begin="0.2s"
-          dur="0.4s"
-          values="1;0"
-        />
-      </path>
+      </g>
     </g>
-    <g
-      fill="currentColor"
+    <path
+      id="light-bulb-light-1"
+      d="M466.667 66.6667H333.333M633.333 500C633.333 628.866 528.866 733.333 400 733.333C271.133 733.333 166.667 628.866 166.667 500C166.667 420.71 206.217 351.02 266.667 308.853L284.727 223.32C289.677 190.74 317.683 166.667 350.637 166.667H449.363C482.316 166.667 510.324 190.74 515.274 223.32L533.333 308.49C593.783 350.653 633.333 420.71 633.333 500Z"
       stroke="currentColor"
+      strokeWidth={66.6667}
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="2"
-    >
-      <path d="M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z" />
-      <set attributeName="opacity" begin="0.6s" to="0" />
-    </g>
-    <mask id="lineMdMoonFilledToSunnyFilledLoopTransition0">
-      <circle cx="12" cy="12" r="12" fill="#fff" />
-      <circle cx="18" cy="6" r="12" fill="#fff">
-        <animate
-          fill="freeze"
-          attributeName="cx"
-          begin="0.6s"
-          dur="0.4s"
-          values="18;22"
-        />
-        <animate
-          fill="freeze"
-          attributeName="cy"
-          begin="0.6s"
-          dur="0.4s"
-          values="6;2"
-        />
-        <animate
-          fill="freeze"
-          attributeName="r"
-          begin="0.6s"
-          dur="0.4s"
-          values="12;3"
-        />
-      </circle>
-      <circle cx="18" cy="6" r="10">
-        <animate
-          fill="freeze"
-          attributeName="cx"
-          begin="0.6s"
-          dur="0.4s"
-          values="18;22"
-        />
-        <animate
-          fill="freeze"
-          attributeName="cy"
-          begin="0.6s"
-          dur="0.4s"
-          values="6;2"
-        />
-        <animate
-          fill="freeze"
-          attributeName="r"
-          begin="0.6s"
-          dur="0.4s"
-          values="10;1"
-        />
-      </circle>
-    </mask>
-    <circle
-      cx="12"
-      cy="12"
-      r="10"
-      fill="currentColor"
-      mask="url(#lineMdMoonFilledToSunnyFilledLoopTransition0)"
-      opacity="0"
-    >
-      <set attributeName="opacity" begin="0.6s" to="1" />
-      <animate
-        fill="freeze"
-        attributeName="r"
-        begin="0.6s"
-        dur="0.4s"
-        values="10;6"
-      />
-    </circle>
+    />
+    <path
+      id="light-bulb-light-2"
+      d="M533.333 300L266.667 300"
+      stroke="currentColor"
+      strokeWidth={66.6667}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </motion.svg>
 );
 
