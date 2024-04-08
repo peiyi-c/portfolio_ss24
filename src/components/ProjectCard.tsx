@@ -1,5 +1,6 @@
 import CodeItem from "./CodeItem";
 import { GithubIcon, GlobeIcon } from "./Icons";
+import { motion } from "framer-motion";
 
 export type ProjectCardProps = {
   id?: string;
@@ -23,7 +24,15 @@ const ProjectCard = ({
   demoLink,
 }: ProjectCardProps) => {
   return (
-    <div className="w-full p-5 lg:my-8 border-none bg-dark dark:bg-light text-light dark:text-dark flex flex-col lg:flex-row gap-5 lg:gap-10 items-center rounded-[1.5rem] shadow-md">
+    <motion.div
+      initial={{ y: 10 }}
+      whileInView={{
+        y: 0,
+        transition: { duration: 0.5, ease: "easeInOut" },
+      }}
+      viewport={{ once: true }}
+      className="w-full p-5 lg:my-8 border-none bg-dark dark:bg-light text-light dark:text-dark flex flex-col lg:flex-row gap-5 lg:gap-10 items-center rounded-[1.5rem] shadow-md"
+    >
       {/* wrapper 1 */}
       <div className="cursor-pointer ">
         <img
@@ -83,7 +92,7 @@ const ProjectCard = ({
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

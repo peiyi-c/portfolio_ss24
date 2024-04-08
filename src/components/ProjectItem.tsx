@@ -1,5 +1,6 @@
 import CodeItem from "./CodeItem";
 import { GithubIcon, GlobeIcon } from "./Icons";
+import { motion } from "framer-motion";
 
 export type ProjectItemProps = {
   id: string;
@@ -21,7 +22,15 @@ const ProjectItem = ({
   demoLink,
 }: ProjectItemProps) => {
   return (
-    <div className="w-full p-5 lg:my-6 border-[0.2rem] border-dark dark:border-light text-dark dark:text-light rounded-[1.5rem] grid grid-rows-5 grid-cols-6 md:grid-rows-4 items-center lg:grid-rows-4 xl:grid-rows-3">
+    <motion.div
+      initial={{ y: 50 }}
+      whileInView={{
+        y: 0,
+        transition: { duration: 0.5, ease: "easeInOut" },
+      }}
+      viewport={{ once: true }}
+      className="w-full p-5 lg:my-6 border-[0.2rem] border-dark dark:border-light text-dark dark:text-light rounded-[1.5rem] grid grid-rows-5 grid-cols-6 md:grid-rows-4 items-center lg:grid-rows-4 xl:grid-rows-3"
+    >
       <div className="self-start row-span-1 col-span-6 lg:col-span-5 lg:text-left">
         <h3 className=" text-[1.2rem] md:text-[1.3rem] font-semibold">
           {title}
@@ -54,7 +63,7 @@ const ProjectItem = ({
           </a>
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
