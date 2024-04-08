@@ -3,111 +3,17 @@
 import Layout from "../layouts/Layout.astro";
 // import components
 import SectionFade from "../components/SectionFade";
-import SkillItem from "../components/SkillItem";
-import {
-  HTML,
-  CSS3,
-  SCSS,
-  Tailwind,
-  Bootstrap,
-  JavaScript,
-  TypeScript,
-  ReactIcon,
-  VueIcon,
-  GitIcon,
-  NpmIcon,
-  Postgresql,
-  Webpack,
-  ViteIcon,
-  AstroIcon,
-  VSCode,
-} from "../components/Icons";
+import Skills from "../components/Skills";
 ---
 
 <Layout title="About | Pei-Yi" description="About | Pei-Yi">
   <SectionFade className="py-8 lg:py-18" client:visible>
+    <!-- headline -->
     <div class="mb-12">
       <h1 class="h1">My Landscape</h1>
-      <h2 class="h2 opacity-70">in broadening...</h2>
+      <h2 class="h2 opacity-70">in broadening</h2>
     </div>
-    <!-- part 1 -->
-    <div class="[&_div]:mb-[3rem] md:[&_div]:mb-[5rem] [&_h3]:mb-4">
-      <h2 class="h2 text-primary dark:text-primaryDark font-bold">
-        My Technical Stack
-      </h2>
-      <!-- part 1.1 -->
-      <div class="">
-        <h3 class="h3">Language ‧ Library ‧ Framework</h3>
-        <ul
-          class="grid grid-flow-row grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5"
-        >
-          <SkillItem skillName="HTML"><HTML /></SkillItem>
-          <SkillItem skillName="CSS3"><CSS3 /></SkillItem>
-          <SkillItem skillName="SCSS"><SCSS /></SkillItem>
-          <SkillItem skillName="Tailwind"><Tailwind /></SkillItem>
-          <SkillItem skillName="Bootstrap"><Bootstrap /></SkillItem>
-          <SkillItem skillName="JavaScript"><JavaScript /></SkillItem>
-          <SkillItem skillName="TypeScript"><TypeScript /></SkillItem>
-          <SkillItem skillName="React"><ReactIcon /></SkillItem>
-          <SkillItem skillName="Vue"><VueIcon /></SkillItem>
-          <SkillItem skillName="Postgresql"
-            ><Postgresql className="p-[0.1rem]" /></SkillItem
-          >
-        </ul>
-      </div>
-
-      <!-- part 1.2 -->
-      <div class="">
-        <h3 class="h3">Build Tools ‧ Manager ‧ Editor</h3>
-        <ul
-          class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5"
-        >
-          <SkillItem skillName="Vite"
-            ><ViteIcon className="p-[0.1rem]" /></SkillItem
-          >
-          <SkillItem skillName="Webpack"><Webpack /></SkillItem>
-          <SkillItem skillName="Astro"><AstroIcon /></SkillItem>
-          <SkillItem skillName="Git"><GitIcon /></SkillItem>
-          <SkillItem skillName="npm"><NpmIcon /></SkillItem>
-          <SkillItem skillName="VSCode"
-            ><VSCode className="p-[0.1rem]" /></SkillItem
-          >
-        </ul>
-      </div>
-    </div>
-
-    <div
-      class="flex flex-col md:flex-row [&_div]:mb-[3rem] md:[&_div]:mb-[5rem] [&_h3]:mb-4"
-    >
-      <!-- part 2 -->
-      <div class="flex-1">
-        <h2 class="h2 text-primary dark:text-primaryDark font-bold">
-          Strengths
-        </h2>
-        <ul
-          class="flex flex-wrap justify-center gap-5 text-[0.9rem] sm:text-[1rem] lg:text-[1.2rem]"
-        >
-          <li>Connectedness</li>
-          <li>Consistency</li>
-          <li>Empathy</li>
-          <li>Organization</li>
-          <li>Learner</li>
-          <li>Thoroughness</li>
-          <li>Restorative</li>
-        </ul>
-      </div>
-      <!-- part 3-->
-      <div class="flex-1">
-        <h2 class="h2 text-primary dark:text-primaryDark font-bold">Hobbies</h2>
-        <ul
-          class="flex flex-wrap justify-center gap-5 text-[0.9rem] sm:text-[1rem] lg:text-[1.2rem]"
-        >
-          <li>Japanese Series</li>
-          <li>Bouldering</li>
-          <li>Aerial Yoga</li>
-          <li>Yoga</li>
-        </ul>
-      </div>
-    </div>
+    <!-- skills -->
+    <Skills client:visible />
   </SectionFade>
 </Layout>
