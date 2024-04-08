@@ -1,5 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+// import component
+import ContactAnimation from "./ContactAnimation";
+// import context
+import ThemeProvider from "./contexts/ThemeContext";
 
 interface MessagesType {
   [status: string]: string;
@@ -21,6 +25,10 @@ const ContactForm = () => {
   const emailRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (nameRef.current) nameRef.current?.focus();
+  }, []);
 
   const checkEmail = (email: string) => {
     const regex = new RegExp("[^@]+@[^.]+..+", "i");
@@ -73,105 +81,110 @@ const ContactForm = () => {
   };
 
   return (
-    <form
-      ref={formRef}
-      onSubmit={sendEmail}
-      role="form"
-      className="mt-10 text-dark dark:text-light font-semibold text-[1.25rem] [&_fieldset]:mb-3 md:[&_fieldset]:mb-6 md:[&_label]:mr-8"
-    >
-      <div className="mx-auto">
-        <fieldset className={sendStatus}>
-          <label htmlFor="name" className={`label ${sendStatus}`}>
-            Name*
-          </label>
-          <input
-            ref={nameRef}
-            type="text"
-            id="name"
-            name="name"
-            className={`input ${sendStatus}`}
-            placeholder="Lily Woodstock"
-            required
-          />
-        </fieldset>
-        <fieldset className={sendStatus}>
-          <label htmlFor="email" className={`label ${sendStatus}`}>
-            E-Mail*
-          </label>
-          <input
-            ref={emailRef}
-            type="email"
-            name="email"
-            id="email"
-            className={`input ${sendStatus}`}
-            placeholder="wood.lil@gmail.com"
-            required
-          />
-        </fieldset>
-      </div>
-
-      <div className="mx-auto">
-        <fieldset className={sendStatus}>
-          <label htmlFor="subject" className={`label ${sendStatus}`}>
-            Subject
-          </label>
-          <input
-            ref={subjectRef}
-            type="text"
-            name="subject"
-            id="subject"
-            className={`input ${sendStatus}`}
-            placeholder="About..."
-          />
-        </fieldset>
-        <fieldset className={`xl:block ${sendStatus}`}>
-          <label htmlFor="message" className={`label ${sendStatus}`}>
-            Message*
-          </label>
-          <textarea
-            ref={messageRef}
-            name="message"
-            id="message"
-            className={`${sendStatus} input min-h-[6rem] max-w-[75%]`}
-            placeholder="Hi! ..."
-            spellCheck="false"
-            required
-          />
-        </fieldset>
-      </div>
-
-      <div className="mb-2 [&_button]:mx-5 [&_button]:my-1 ">
-        <button
-          id="send-button"
-          className={`btn btn-form ${sendStatus}`}
-          type="submit"
-          disabled={
-            sendStatus === "success"
-              ? true
-              : sendStatus === "sending"
-              ? true
-              : undefined
-          }
+    <>
+      <ThemeProvider>
+        <ContactAnimation />
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          role="form"
+          className="mt-10 text-dark dark:text-light font-semibold text-[1.25rem] [&_fieldset]:mb-3 md:[&_fieldset]:mb-6 md:[&_label]:mr-8"
         >
-          Send
-        </button>
-        <button
-          id="reset-button"
-          className={`btn btn-form ${sendStatus}`}
-          type="reset"
-          disabled={
-            sendStatus === "success"
-              ? true
-              : sendStatus === "sending"
-              ? true
-              : undefined
-          }
-        >
-          Reset
-        </button>
-      </div>
-      <code className={`${sendStatus}`}>{messages[sendStatus]}</code>
-    </form>
+          <div className="mx-auto">
+            <fieldset className={sendStatus}>
+              <label htmlFor="name" className={`label ${sendStatus}`}>
+                Name*
+              </label>
+              <input
+                ref={nameRef}
+                type="text"
+                id="name"
+                name="name"
+                className={`input ${sendStatus}`}
+                placeholder="Lily Woodstock"
+                required
+              />
+            </fieldset>
+            <fieldset className={sendStatus}>
+              <label htmlFor="email" className={`label ${sendStatus}`}>
+                E-Mail*
+              </label>
+              <input
+                ref={emailRef}
+                type="email"
+                name="email"
+                id="email"
+                className={`input ${sendStatus}`}
+                placeholder="wood.lil@gmail.com"
+                required
+              />
+            </fieldset>
+          </div>
+
+          <div className="mx-auto">
+            <fieldset className={sendStatus}>
+              <label htmlFor="subject" className={`label ${sendStatus}`}>
+                Subject
+              </label>
+              <input
+                ref={subjectRef}
+                type="text"
+                name="subject"
+                id="subject"
+                className={`input ${sendStatus}`}
+                placeholder="About..."
+              />
+            </fieldset>
+            <fieldset className={`xl:block ${sendStatus}`}>
+              <label htmlFor="message" className={`label ${sendStatus}`}>
+                Message*
+              </label>
+              <textarea
+                ref={messageRef}
+                name="message"
+                id="message"
+                className={`${sendStatus} input min-h-[6rem] max-w-[75%]`}
+                placeholder="Hi! ..."
+                spellCheck="false"
+                required
+              />
+            </fieldset>
+          </div>
+
+          <div className="mb-2 [&_button]:mx-5 [&_button]:my-1 ">
+            <button
+              id="send-button"
+              className={`btn btn-form ${sendStatus}`}
+              type="submit"
+              disabled={
+                sendStatus === "success"
+                  ? true
+                  : sendStatus === "sending"
+                  ? true
+                  : undefined
+              }
+            >
+              Send
+            </button>
+            <button
+              id="reset-button"
+              className={`btn btn-form ${sendStatus}`}
+              type="reset"
+              disabled={
+                sendStatus === "success"
+                  ? true
+                  : sendStatus === "sending"
+                  ? true
+                  : undefined
+              }
+            >
+              Reset
+            </button>
+          </div>
+          <code className={`${sendStatus}`}>{messages[sendStatus]}</code>
+        </form>
+      </ThemeProvider>
+    </>
   );
 };
 
