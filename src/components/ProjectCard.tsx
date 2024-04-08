@@ -66,7 +66,7 @@ const ProjectCard = ({
         <div className="lg:flex lg:justify-end">
           <button
             id="repository-button"
-            className="btn m-2 p-2 bg-primary dark:bg-primaryDark rounded-md shadow-md group"
+            className="btn m-2 p-2 bg-gradient-to-tl from-primary to-space dark:from-primaryDark dark:to-spaceDark rounded-md shadow-md group"
           >
             <a
               href={repoLink}
@@ -79,7 +79,7 @@ const ProjectCard = ({
           </button>
           <button
             id="demolink-button"
-            className="btn m-2 p-2 bg-space dark:bg-spaceDark rounded-md shadow-md group"
+            className="btn m-2 p-2 bg-gradient-to-tl from-space to-primary dark:from-spaceDark dark:to-primaryDark rounded-md shadow-md group"
           >
             <a
               href={demoLink}
