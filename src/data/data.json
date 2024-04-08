@@ -3,35 +3,27 @@
     {
       "id": "project-5",
       "title": "Thread Clone",
-      "subtitle": "social media platform",
+      "subtitle": "Social Media Platform",
       "languages": [
-        "firebase",
-        "react",
-        "react-router",
-        "zustand",
-        "chakra-ui",
-        "swiperjs",
-        "CRUD"
+        "Chakra UI",
+        "Firebase",
+        "React.js",
+        "React Router",
+        "Swiper.js",
+        "zustand"
       ],
       "screenshot": "5",
-      "description": "To get started, you need to create an account with an e-amil and a password. After that, you can interact with other users by sharing posts, photos and videos.",
+      "description": "Like many other social platforms, this app is eqipped with create, read, update and delete operations (CRUD). To get started, users need to create an account with e-amil and password (user authentication via firebase). After registration, users can interact with others by sharing posts, photos and videos (text and media storage on cloud firestore database and storage).",
       "repoLink": "https://github.com/peiyi-c/threads-clone",
       "demoLink": "https://threads-clone-silk-five.vercel.app/@Emily.Swift"
     },
     {
       "id": "project-4",
       "title": "Where in the World?",
-      "subtitle": "rest countries API",
-      "languages": [
-        "react",
-        "axios",
-        "react-router",
-        "react-router-hash-link",
-        "countupjs",
-        "animatecss"
-      ],
+      "subtitle": "REST Countries API",
+      "languages": ["axios", "React.js", "React Router"],
       "screenshot": "4",
-      "description": "User can see all countries from the data source and search for a country by keyword, filter countries by region. Country card shows see more detailed information on a separate page. Light and dark mode available",
+      "description": "Featuring country information from the REST countries API, this website offers functionalities to search for countries with keywords or filter by regions. Each country card shows country basic information, such as flag, capital, official languages and also links to bordered countries if any exists. Light and dark mode available.",
       "repoLink": "https://github.com/peiyi-c/Frontend_Mentor/tree/main/20231025_rest_countries",
       "demoLink": "https://20231025-rest-country.netlify.app/"
     }
@@ -40,20 +32,28 @@
     {
       "id": "project-3",
       "title": "Supernova Black",
-      "subtitle": "candidate portfolio",
-      "languages": ["React", "API"],
+      "subtitle": "Portfolio Page",
+      "languages": [
+        "animate.css",
+        "Countup.js",
+        "React.js",
+        "React Router",
+        "React Router Hash Link",
+        "SCSS",
+        "TypeScript"
+      ],
       "screenshot": "3",
-      "description": "Candidate Supernova Black is running for mayor in Meow-Li. He has created this website with some animations to get more support!",
+      "description": "Candidate Supernova Black is running for mayor in Meow-Li. He created this website with some animations to get more support!",
       "repoLink": "https://github.com/peiyi-c/2023-F2E-mission1",
       "demoLink": "https://peiyi-c.github.io/2023-F2E-mission1/"
     },
     {
       "id": "project-2",
-      "title": "Web Calculator",
-      "subtitle": "with color themes",
-      "languages": ["typescript", "scss", "react"],
+      "title": "Web Calculator ",
+      "subtitle": "With Multiple Color Themes",
+      "languages": ["React.js", "SCSS", "TypeScript"],
       "screenshot": "2",
-      "description": "This app can perform mathmatical operations like addition, subtraction, multiplication, and division. And even for more joy, use can adjust color theme based on their preference.",
+      "description": "This app can perform mathmatical operations like addition, subtraction, multiplication, and division. What's more, it provides 3 different color themes for users to choose!",
       "repoLink": "https://github.com/peiyi-c/Frontend_Mentor/tree/main/20231013_calculator-app",
       "demoLink": "https://third-toes.surge.sh/"
     },
@@ -61,9 +61,9 @@
       "id": "project-1",
       "title": "Backstage Talks",
       "subtitle": "A Frontend Practice Project",
-      "languages": ["scss", "react", "react-scroll"],
+      "languages": ["React.js", "SCSS", "React Scroll"],
       "screenshot": "1",
-      "description": "A replica of Backstage Talks - Magazine Archive website. With special scroll effect",
+      "description": "A replica of Backstage Talks - Magazine Archive website featuring special scroll effect.",
       "repoLink": "https://github.com/peiyi-c/Frontend_Practice/tree/main/20230907_backstage-talks",
       "demoLink": "https://envious-kittens.surge.sh/"
     }

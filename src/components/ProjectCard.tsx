@@ -34,20 +34,23 @@ const ProjectCard = ({
       </div>
       {/* wrapper 2 */}
       <div className="flex-1">
-        <div className="grid grid-rows-5 grid-cols-4 md:grid-rows-3 justify-center items-center">
-          <div className="lg:text-left col-span-4 md:col-span-2">
+        <div className="justify-center items-center grid grid-rows-5 grid-cols-4 lg:grid-cols-3 lg:grid-rows-3 xl:grid-rows-4 ">
+          <div className="col-span-4 lg:text-left lg:col-span-2">
             <h3 className="text-[1.2rem] md:text-[1.3rem] font-semibold  md:font-bold lg:text-[2rem]">
               {title}
             </h3>
-            <h4 className="">{subtitle}</h4>
+            <h4 className="text-[1.1rem] md:text-[1.2rem] font-semibold lg:text-[1.5rem] opacity-75">
+              {subtitle}
+            </h4>
           </div>
 
-          <ul className="row-start-2 row-span-2 col-span-4 md:col-span-2 md:row-span-1 xl:col-span-3 lg:text-left">
+          <ul className="row-start-2 row-span-1 col-span-4 lg:text-left">
             {languages.map((language) => (
               <CodeItem key={`${language}-${id}`} itemName={language} />
             ))}
           </ul>
-          <p className="sm:row-start-4 md:row-span-2 lg:my-2 row-span-4 col-span-4 lg:text-left ">
+
+          <p className="row-span-4 col-span-4 sm:row-start-3 md:text-[1.1rem] lg:row-span-2 lg:text-left xl:text-[1.2rem]">
             {description}
           </p>
         </div>
