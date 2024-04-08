@@ -8,7 +8,7 @@ const ModeSwitcher = () => {
     <button
       id="theme-button"
       onClick={() => setMode(mode === "light" ? "dark" : "light")}
-      className="w-9 mt-2 text-dark dark:text-light"
+      className="w-10 mt-2 text-dark dark:text-light"
       type="button"
       role="switch"
       aria-checked={mode === "dark" ? true : false}

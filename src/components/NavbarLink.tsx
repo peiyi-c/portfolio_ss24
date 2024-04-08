@@ -1,14 +1,23 @@
-type NavbarLinkReactProps = {
+type NavbarLinkProps = {
   title: string;
   href: string;
+  toggleMenu: boolean;
+  setToggleMenu: (value: boolean) => void;
   className?: string;
 };
-const NavbarLinkReact = ({ title, href, className }: NavbarLinkReactProps) => {
+const NavbarLink = ({
+  title,
+  href,
+  toggleMenu,
+  setToggleMenu,
+  className,
+}: NavbarLinkProps) => {
   return (
     <li
       className={`nav-link relative group my-9 lg:my-0 text-center group ${className}`}
     >
       <a
+        onClick={() => setToggleMenu(!toggleMenu)}
         href={href}
         className="text-dark dark:text-light group-hover:text-primary dark:group-hover:text-primaryDark"
       >
@@ -21,4 +30,4 @@ const NavbarLinkReact = ({ title, href, className }: NavbarLinkReactProps) => {
   );
 };
 
-export default NavbarLinkReact;
+export default NavbarLink;

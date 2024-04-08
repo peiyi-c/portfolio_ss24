@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { MenuIcon, GithubIcon, LinkedInIcon } from "./Icons";
 import ModeSwitcher from "./ModeSwitcher";
-import NavbarIconReact from "./NavbarIconReact";
-import NavbarLinkReact from "./NavbarLinkReact";
+import NavbarIcon from "./NavbarIcon";
+import NavbarLink from "./NavbarLink";
 
-const NavbarReact = () => {
+const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [isX, setIsX] = useState(false);
 
@@ -24,7 +24,6 @@ const NavbarReact = () => {
     { id: 3, href: "/projects", title: "Projects" },
     { id: 4, href: "/contact", title: "Contact" },
   ];
-
   return (
     <>
       <MenuIcon
@@ -36,33 +35,32 @@ const NavbarReact = () => {
       <nav
         className={`bg-light/75 dark:bg-dark/75 ${toggleMenu ? "open" : ""}`}
       >
-        <ul
-          onClick={() => setToggleMenu(!toggleMenu)}
-          className="menu p-10 mx-auto mt-5 lg:mt-0 font-medium w-[85%] lg:w-full flex flex-col lg:flex-row justify-between items-center lg:col-span-6"
-        >
+        <ul className="menu p-10 mx-auto mt-5 lg:mt-0 font-medium w-[85%] lg:w-full flex flex-col lg:flex-row justify-between items-center lg:col-span-6">
           {links.map((link) => (
-            <NavbarLinkReact
+            <NavbarLink
               key={link.id}
               href={link.href}
               title={link.title}
+              toggleMenu={toggleMenu}
+              setToggleMenu={setToggleMenu}
             />
           ))}
         </ul>
         <div className="lg:col-span-2"></div>
         <ul className="menu mx-auto w-[85%] lg:w-full flex items-center justify-around lg:col-span-4">
-          <NavbarIconReact href="https://github.com/peiyi-c">
+          <NavbarIcon href="https://github.com/peiyi-c">
             <GithubIcon className="text-dark dark:text-light" />
-          </NavbarIconReact>
-          <NavbarIconReact href="https://www.linkedin.com/in/peiyichena/">
+          </NavbarIcon>
+          <NavbarIcon href="https://www.linkedin.com/in/peiyichena/">
             <LinkedInIcon className="fill-dark dark:fill-light" />
-          </NavbarIconReact>
-          <NavbarIconReact>
+          </NavbarIcon>
+          <NavbarIcon>
             <ModeSwitcher />
-          </NavbarIconReact>
+          </NavbarIcon>
         </ul>
       </nav>
     </>
   );
 };
 
-export default NavbarReact;
+export default Navbar;

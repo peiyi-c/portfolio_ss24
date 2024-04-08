@@ -52,7 +52,7 @@ export const LightBulbDark = ({ className, ...rest }: IconProps) => (
     viewBox="0 0 800 908"
     fill="none"
     className={`w-full h-auto ${className}`}
-    whileHover={{ y: -2 }}
+    whileHover={{ rotate: 10 }}
     whileTap={{ scale: 1.1 }}
     {...rest}
   >
@@ -104,7 +104,7 @@ export const LightBulb = ({ className, ...rest }: IconProps) => (
     viewBox="0 0 800 956"
     fill="none"
     className={`w-full h-auto ${className}`}
-    whileHover={{ y: -2 }}
+    whileHover={{ rotate: 10 }}
     whileTap={{ scale: 1.1 }}
     {...rest}
   >
@@ -129,7 +129,7 @@ export const LightBulb = ({ className, ...rest }: IconProps) => (
         strokeWidth={60}
         strokeLinecap="round"
       />
-      <g id="light-bulb-light-line-2" filter="url(#filter0_b_1_2)">
+      <g id="light-bulb-light-line-2">
         <line
           x1={109.446}
           y1={745.426}

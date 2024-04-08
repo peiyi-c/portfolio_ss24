@@ -2,7 +2,7 @@
 // import styles
 import "../styles/tailwind.css";
 // import components
-import NavbarReact from "../components/NavbarReact";
+import Navbar from "../components/Navbar";
 import Main from "../components/Main";
 import Footer from "../components/Footer.astro";
 // add view transitions
@@ -37,7 +37,7 @@ const { description } = Astro.props;
   </head>
   <body>
     <header>
-      <NavbarReact client:load />
+      <Navbar client:load />
     </header>
     <Main client:load>
       <slot />
