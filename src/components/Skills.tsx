@@ -29,7 +29,7 @@ const Skills = () => {
         </h2>
         {/* <!-- part 1.1 --> */}
         <motion.div
-          initial={{ y: 50 }}
+          initial={{ y: 10 }}
           whileInView={{
             y: 0,
             transition: { duration: 1, ease: "easeInOut" },
@@ -74,7 +74,7 @@ const Skills = () => {
 
         {/* <!-- part 1.2 --> */}
         <motion.div
-          initial={{ y: 50 }}
+          initial={{ y: 10 }}
           whileInView={{
             y: 0,
             transition: { duration: 1.5, ease: "easeInOut" },
@@ -83,7 +83,7 @@ const Skills = () => {
           className=""
         >
           <h3 className="h3">Build Tools ‧ Manager ‧ Editor</h3>
-          <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5">
+          <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 ">
             <SkillItem skillName="Vite">
               <ViteIcon className="p-[0.1rem]" />
             </SkillItem>
@@ -107,7 +107,7 @@ const Skills = () => {
       </div>
 
       <motion.div
-        initial={{ y: -50 }}
+        initial={{ y: -10 }}
         whileInView={{
           y: 0,
           transition: { duration: 0.5, ease: "easeInOut" },
