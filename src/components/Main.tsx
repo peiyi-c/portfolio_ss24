@@ -1,6 +1,3 @@
-import React from "react";
-import { AnimatePresence } from "framer-motion";
-
 type MainProps = {
   children: React.ReactNode;
 };
