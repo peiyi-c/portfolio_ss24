@@ -828,7 +828,7 @@ export const Star = ({ className, ...rest }: IconProps) => {
     <motion.svg
       initial={{ x: "200%", y: "-100%", scale: 0.7, rotate: -50, opacity: 1 }}
       animate={{ x: "-200%", y: "80%", scale: 0.5, rotate: 50, opacity: 0 }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
+      transition={{ duration: 0.5, ease: "easeIn", delay: 1.2 }}
       viewport={{ once: true }}
       xmlns="http://www.w3.org/2000/svg"
       width={30}
