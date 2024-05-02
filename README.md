@@ -2,10 +2,11 @@
 
 ### Link
 
-- Live Site URL: [URL](https://peiyi-c.github.io/pch-portfolio/)
+- Live Site URL: [URL](https://portfolio-ss24.vercel.app/projects)
 
 ### Built with
 
-- build: [Astro.build](http://Astro.build)
+- web framework: [Astro.build](http://Astro.build)
 - animation: framer-motion
 - dark mode, RWD: Tailwind CSS
+- mailbox: EmailJS SDK(https://www.npmjs.com/package/@emailjs/browser)
