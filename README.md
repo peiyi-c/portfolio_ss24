@@ -7,6 +7,9 @@
 ### Built with
 
 - web framework: [Astro.build](http://Astro.build)
-- animation: framer-motion
-- dark mode, RWD: Tailwind CSS
-- mailbox: EmailJS SDK(https://www.npmjs.com/package/@emailjs/browser)
+- animation: [framer-motion](https://www.framer.com/)
+- dark mode, RWD: [Tailwind CSS](https://tailwindcss.com/docs/)
+- mailbox: [EmailJS SDK](https://www.npmjs.com/package/@emailjs/browser)
+
+- React
+- TypeScript
