@@ -34,24 +34,28 @@ const ProjectCard = ({
       className="w-full p-5 lg:my-8 border-none bg-dark dark:bg-light text-light dark:text-dark flex flex-col lg:flex-row gap-5 lg:gap-10 items-center rounded-[1.5rem] shadow-md"
     >
       {/* wrapper 1 */}
-      <div className="cursor-pointer ">
+      <a href={demoLink} target="_blank" className="cursor-pointer ">
         <img
           src={`./projects/project-${screenshot}.png`}
           alt={`project-${id}-screenshot`}
           className="object-cover w-[60svw] sm:w-[50svw] md:w-[20rem] rounded-lg"
         />
-      </div>
+      </a>
       {/* wrapper 2 */}
       <div className="flex-1">
         <div className="justify-center items-center grid grid-rows-5 grid-cols-4 lg:grid-cols-3 lg:grid-rows-3 xl:grid-rows-4 ">
-          <div className="col-span-4 lg:text-left lg:col-span-2">
+          <a
+            href={demoLink}
+            target="_blank"
+            className="col-span-4 lg:text-left lg:col-span-2"
+          >
             <h3 className="text-[1.2rem] md:text-[1.3rem] font-semibold  md:font-bold lg:text-[2rem]">
               {title}
             </h3>
             <h4 className="text-[1.1rem] md:text-[1.2rem] font-semibold lg:text-[1.5rem] opacity-75">
               {subtitle}
             </h4>
-          </div>
+          </a>
 
           <ul className="row-start-2 row-span-1 col-span-4 lg:text-left">
             {languages.map((language) => (

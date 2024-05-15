@@ -31,14 +31,18 @@ const ProjectItem = ({
       viewport={{ once: true }}
       className="w-full p-5 lg:my-6 border-[0.2rem] border-dark dark:border-light text-dark dark:text-light rounded-[1.5rem] grid grid-rows-5 grid-cols-6 md:grid-rows-4 items-center lg:grid-rows-4 xl:grid-rows-3"
     >
-      <div className="self-start row-span-1 col-span-6 lg:col-span-5 lg:text-left">
+      <a
+        href={demoLink}
+        target="_blank"
+        className="self-start row-span-1 col-span-6 lg:col-span-5 lg:text-left"
+      >
         <span className="text-[1.2rem] md:text-[1.3rem] font-semibold">
           {title}{" "}
         </span>
         <span className="text-[1.1rem] md:text-[1.2rem] font-normal opacity-75">
           - {subtitle}
         </span>
-      </div>
+      </a>
 
       <ul className="row-span-1 col-span-6 lg:text-left">
         {languages.map((language) => (
