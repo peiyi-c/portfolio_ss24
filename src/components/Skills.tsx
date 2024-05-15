@@ -11,7 +11,7 @@ import {
   VueIcon,
   GitIcon,
   NpmIcon,
-  Postgresql,
+  SQLIcon,
   Webpack,
   ViteIcon,
   AstroIcon,
@@ -66,8 +66,8 @@ const Skills = () => {
             <SkillItem skillName="Vue">
               <VueIcon />
             </SkillItem>
-            <SkillItem skillName="Postgresql">
-              <Postgresql className="p-[0.1rem]" />
+            <SkillItem skillName="SQL">
+              <SQLIcon />
             </SkillItem>
           </ul>
         </motion.div>
