@@ -1,6 +1,16 @@
 {
   "projectCards": [
     {
+      "id": "project-6",
+      "title": "Verdant vie",
+      "subtitle": "Online shop",
+      "languages": ["Vue.js", "Vue Router", "Bootstrap", "SCSS"],
+      "screenshot": "6",
+      "description": "This project includes essential features for an online shopping website, such as viewing product details, adding or removing items from the shopping cart, and selecting payment and shipping methods at different checkout stages.",
+      "repoLink": "https://github.com/peiyi-c/verdant-vie",
+      "demoLink": "https://verdant-vie.vercel.app/"
+    },
+    {
       "id": "project-5",
       "title": "Thread Clone",
       "subtitle": "Social Media Platform",
