@@ -1,0 +1,77 @@
+<div
+  id="cookies"
+  class="fixed bottom-0 left-0 right-0 p-4 md:p-3 lg:p-6 bg-white/95 dark:bg-dark/75 rounded-md text-note dark:text-noteDark z-30 flex flex-nowrap justify-center gap-2 opacity-0"
+>
+  <p class="self-center">
+    This website uses cookies to enhence the user experience.
+  </p>
+  <button
+    id="cookies-btn"
+    class="self-end btn h-[2rem] px-2 border-[1px] border-note dark:border-noteDark text-nowrap text-note fw-bold"
+    >That's fine!</button
+  >
+</div>
+
+<style scoped>
+  #cookie-banner {
+    font-size: small;
+  }
+</style>
+<script>
+  const cookieDiv = document.querySelector("#cookies") as HTMLDivElement;
+  const cookieBtn = document.querySelector("#cookies-btn") as HTMLButtonElement;
+
+  function loadGA(id: string) {
+    if (!getCookie("ga-cookie")) return;
+    // script 1
+    const script1 = document.createElement("script");
+    script1.type = "text/partytown";
+    script1.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+    script1.async = true;
+    document.head.appendChild(script1);
+
+    // script 2
+    const script2 = document.createElement("script");
+    script2.type = "text/partytown";
+    script2.innerHTML =
+      'window.dataLayer = window.dataLayer || []; function gtag() {window.dataLayer.push(arguments)}; gtag("js", new Date()); gtag("config", id)';
+    document.head.appendChild(script2);
+  }
+
+  function setCookie(name: string, value: boolean, days: number) {
+    let date = new Date();
+    date.setDate(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires + "; path=/";
+  }
+
+  function getCookie(cookieName: string) {
+    const name = cookieName + "=";
+    const decodes = decodeURIComponent(document.cookie).split("; ");
+    let value;
+    decodes.forEach((decode) => {
+      if (decode.indexOf(name) === 0) {
+        value = decode.substring(name.length);
+      }
+    });
+    console.log(value);
+    return value;
+  }
+
+  function handleBanner() {
+    if (!getCookie("ga-cookie")) {
+      cookieDiv.classList.add("opacity-100");
+    } else {
+      loadGA("G-9W0XMPH2FC");
+    }
+  }
+
+  // consent to cookies when button clicked
+  cookieBtn?.addEventListener("click", () => {
+    cookieDiv.style.display = "none";
+    setCookie("ga-cookie", true, 30);
+  });
+
+  // (not) show banner when load
+  window.addEventListener("load", handleBanner);
+</script>

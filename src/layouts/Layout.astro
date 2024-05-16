@@ -7,6 +7,8 @@ import Main from "../components/Main";
 import Footer from "../components/Footer.astro";
 // add view transitions
 import { ViewTransitions } from "astro:transitions";
+// google analytics
+import CookieBannerGA from "../components/CookieBannerGA.astro";
 
 // types
 interface Props {
@@ -43,6 +45,7 @@ const { description } = Astro.props;
       <slot />
       <!-- different pages to be rendered here -->
     </Main>
+    <CookieBannerGA />
     <Footer />
     <script is:inline>
       // theme
