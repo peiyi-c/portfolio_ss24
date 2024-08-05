@@ -8,6 +8,7 @@ import {
   JavaScript,
   TypeScript,
   ReactIcon,
+  PythonIcon,
   VueIcon,
   GitIcon,
   NpmIcon,
@@ -65,6 +66,9 @@ const Skills = () => {
             </SkillItem>
             <SkillItem skillName="Vue">
               <VueIcon />
+            </SkillItem>
+            <SkillItem skillName="Python">
+              <PythonIcon />
             </SkillItem>
             <SkillItem skillName="SQL">
               <SQLIcon />
